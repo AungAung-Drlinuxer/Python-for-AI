@@ -30,7 +30,7 @@ AI project တွေမှာ OpenAI လို API client တွေနှင့�
 ## Reference Links
 
 - Classes overview: https://python.datalumina.com/ တွင် classes module ကို ကြည့်ပါ
-- First-class / blueprint အခြေခံ: https://python.datalumina.com/
-- Methods & Attributes: https://python.datalumina.com/
-- Inheritance: https://python.datalumina.com/
-- When to use OOP: https://python.datalumina.com/
+- First-class / blueprint အခြေခံ: https://python.datalumina.com/advanced/classes/first-class
+- Methods & Attributes: https://python.datalumina.com/advanced/classes/methods-attributes
+- Inheritance: https://python.datalumina.com/advanced/classes/inheritance
+- When to use OOP: https://python.datalumina.com/advanced/classes/when-to-use

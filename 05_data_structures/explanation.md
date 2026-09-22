@@ -68,7 +68,7 @@ phonebook["Carol"] = "098765432"
 
 # Check if a key exists
 if "Bob" in phonebook:
-    print("Bob is in the phone book")  # Output: Bob is in the phone book
+ print("Bob is in the phone book")  # Output: Bob is in the phone book
 ```
 
 ### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ

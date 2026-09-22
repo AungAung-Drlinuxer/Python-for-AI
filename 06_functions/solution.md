@@ -5,7 +5,7 @@
 ```python
 # Define a function with no parameters
 def greet():
-    print("Welcome to Python for AI!")
+ print("Welcome to Python for AI!")
 
 # Call the function three times
 greet()
@@ -17,14 +17,14 @@ greet()
 # Welcome to Python for AI!
 ```
 
-Key idea: `def` နဲ့ function ကို define လုပ်ပြီး အမည်နဲ့ `()` ခေါ်ရုံပဲ။
+**အဓိကအယူအဆ** — `def` နဲ့ function ကို define လုပ်ပြီး အမည်နဲ့ `()` ခေါ်ရုံပဲ။
 
 ## လေ့ကျင့်ခန်း ၂ — Solution
 
 ```python
 # Define a function that takes one parameter
 def greet_name(name):
-    print("Hello, " + name + "!")
+ print("Hello, " + name + "!")
 
 # Call it with two different names
 greet_name("Aung")
@@ -34,14 +34,14 @@ greet_name("Su")
 # Hello, Su!
 ```
 
-Key idea: Parameter `name` ထဲမှာ ခေါ်စဉ် ထည့်လိုက်တဲ့ argument အစားဝင်သွားတယ်။
+**အဓိကအယူအဆ** — Parameter `name` ထဲမှာ ခေါ်စဉ် ထည့်လိုက်တဲ့ argument အစားဝင်သွားတယ်။
 
 ## လေ့ကျင့်ခန်း ၃ — Solution
 
 ```python
 # Define a function that returns the sum
 def add_numbers(a, b):
-    return a + b
+ return a + b
 
 # Store the returned value, then print it
 result = add_numbers(5, 3)
@@ -50,15 +50,15 @@ print("Result:", result)
 # Result: 8
 ```
 
-Key idea: `print()` က ပြတာပဲ၊ `return` က တန်ဖိုးကို program ထဲ ပြန်ပေးတာဖြစ်တယ်။
+**အဓိကအယူအဆ** — `print()` က ပြတာပဲ၊ `return` က တန်ဖိုးကို program ထဲ ပြန်ပေးတာဖြစ်တယ်။
 
 ## လေ့ကျင့်ခန်း ၄ — Solution
 
 ```python
 # Define a function that calculates tax
 def calculate_tax(price, rate):
-    tax = price * rate
-    return tax
+ tax = price * rate
+ return tax
 
 # Use the returned value to compute the total
 tax_amount = calculate_tax(20000, 0.05)
@@ -70,7 +70,7 @@ print("Total:", total)
 # Total: 21000.0
 ```
 
-Key idea: Return ပြန်တဲ့ ရလဒ်ကို variable မှာ သိမ်းပြီး တွက်ချက်မှုအသစ်မှာ ဆက်သုံးလို့ရတယ်။
+**အဓိကအယူအဆ** — Return ပြန်တဲ့ ရလဒ်ကို variable မှာ သိမ်းပြီး တွက်ချက်မှုအသစ်မှာ ဆက်သုံးလို့ရတယ်။
 
 ## လေ့ကျင့်ခန်း ၅ — Solution
 
@@ -90,15 +90,15 @@ print(is_long_message("This is a very long message"))
 # True
 ```
 
-Key idea: `len()` နဲ့ `if/else` ကို တွဲသုံးပြီး boolean တန်ဖိုး (`True`/`False`) return ပြန်တယ်။
+**အဓိကအယူအဆ** — `len()` နဲ့ `if/else` ကို တွဲသုံးပြီး boolean တန်ဖိုး (`True`/`False`) return ပြန်တယ်။
 
 ## လေ့ကျင့်ခန်း ၆ — Solution
 
 ```python
 # Define a function with a default parameter value
 def build_prompt(role="assistant", task=""):
-    prompt = "You are a " + role + ". Your task: " + task
-    return prompt
+ prompt = "You are a " + role + ". Your task: " + task
+ return prompt
 
 # Call with an explicit role
 prompt1 = build_prompt(role="assistant", task="summarize the text")
@@ -112,4 +112,4 @@ print(prompt2)
 # You are a assistant. Your task: translate to Burmese
 ```
 
-Key idea: Default parameter နဲ့ function တစ်ခုကို ပိုမို စုံလင်အောင် လုပ်နိုင်ပြီး AI agent ရဲ့ prompt တွေကို ထပ်ခါထပ်ခါ တည်ဆောက်လို့ရတယ်။
+**အဓိကအယူအဆ** — Default parameter နဲ့ function တစ်ခုကို ပိုမို စုံလင်အောင် လုပ်နိုင်ပြီး AI agent ရဲ့ prompt တွေကို ထပ်ခါထပ်ခါ တည်ဆောက်လို့ရတယ်။

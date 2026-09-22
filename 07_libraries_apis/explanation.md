@@ -131,10 +131,10 @@ df = pd.DataFrame(users)
 # Show only the name and email columns
 print(df[["name", "email"]].head(3))
 # Expected output:
-#                name                          email
-# 0     Leanne Graham        Sincere@april.biz
-# 1   Ervin Howell         Shanna@melissa.tv
-# 2  Clementine Bauch  Nathan@yesenia.net
+# name email
+# 0 Leanne Graham Sincere@april.biz
+# 1 Ervin Howell Shanna@melissa.tv
+# 2 Clementine Bauch Nathan@yesenia.net
 ```
 
 ### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ

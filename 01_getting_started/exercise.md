@@ -8,6 +8,8 @@
 
 **Expected behavior** — `Python 3.x.x` ပုံစံ အရေအတွက် တစ်ခု ပေါ်လာပါမည်။ မပေါ်လျှင် Python ကို install လုပ်ရန် လိုအပ်သည်။
 
+**Hints:** Terminal ထဲတွင် `--version` flag ပါတဲ့ command ကို ရိုက်ကြည့်ပါ — Windows မှာ `python` နဲ့ စတင်ပြီး macOS/Linux မှာ `python3` လို့ ခေါ်ရတတ်သည်ကို သတိပြုပါ။
+
 ## ၂။ ပထမဆုံး Python File ရေးခြင်း
 
 **Task** — VS Code ထဲမှာ `hello.py` file တစ်ခု ဖန်တီးပြီး ကိုယ့်နာမည်ကို နှုတ်ခေါ်သည့် code ရေးပါ။ ထို့နောက် terminal ကနေ run ပါ။
@@ -15,6 +17,8 @@
 **Hint** — `print()` function ကို အသုံးပြုပါ။ Run ရန် `python hello.py` ရိုက်ပါ။
 
 **Expected behavior** — Terminal ထဲမှာ ကိုယ့်နာမည်နှင့်အတူ နှုတ်ခေါ်စာ တစ်ကြောင်း ပေါ်လာပါမည်။
+
+**Hints:** `print()` function ကို အသုံးပြပြီး ကိုယ့်နာမည်ကို အတွင်းမှာ ရေးပါ။ Terminal မှာ `python hello.py` ဟု ရိုက်ကြည့်ပါ။
 
 ## ၃။ ကိုယ်ပိုင် AI Workspace ဖန်တီးခြင်း
 
@@ -24,13 +28,17 @@
 
 **Expected behavior** — `python intro.py` run လိုက်လျှင် ရည်မှန်းချက် ၃ ကြောင်း ထွက်လာပါမည်။
 
-## ၄။ Virtual Environment ဖန်တီးပြင့် Activate လုပ်ခြင်း
+**Hints:** VS Code တွင် File > Open Folder ဖြင့် folder ဖွင့်ပြီး `print()` ကို ၃ ကြိမ် အသုံးပြုပါ။
+
+## ၄။ Virtual Environment ဖန်တီးပြီး် Activate လုပ်ခြင်း
 
 **Task** — Workspace ထဲမှာ `.venv` ဟု အမည်ပေးထားသော virtual environment တစ်ခု ဖန်တီးပြီး activate လုပ်ပါ။
 
 **Hint** — `python -m venv .venv` ဖြင့် ဖန်တီးပါ။ Windows မှာ `.venv\Scripts\activate` ၊ macOS/Linux မှာ `source .venv/bin/activate` ဖြင့် activate လုပ်ပါ။
 
 **Expected behavior** — Terminal ရှေ့မှာ `(.venv)` ဟု ပေါ်လာပြီး သင့် environment အသုံးပြုရန် အသင့်ဖြစ်ပါမည်။
+
+**Hints:** `python -m venv .venv` ဖြင့် ဖန်တီးပြီး Windows တွင် `.venv\Scripts\activate` ၊ macOS/Linux တွင် `source .venv/bin/activate` ဖြင့် activate လုပ်ပါ။
 
 ## ၅။ Package Install လုပ်ပြီး အသုံးပြုခြင်း
 
@@ -40,6 +48,8 @@
 
 **Expected behavior** — `python sum.py` run လိုက်လျှင် ကိန်းများ၏ ပမာဏ တစ်ခု ထွက်လာပါမည်။
 
+**Hints:** `pip install numpy` ဖြင့် install လုပ်ပြီး `import numpy as np` ၊ `np.array()` နှင့် `.sum()` တို့ကို အသုံးပြုပါ။
+
 ## ၆။ AI Agent အတွက် ကြိုတင်စစ်ဆေးမှု Script
 
 **Task** — AI agent တစ်ခု တည်ဆောက်ရန် အစီအစဉ်ရှိသူတစ်ဦးအဖြစ် ဖြင့် `check_setup.py` file တစ်ခု ရေးပါ။ ဒီ script က Python ကို အသုံးပြု၍ ပြုလုပ်ရမည့် အဆင့်များကို တစ်ဆင့်ချင်း ရှင်းပြပါမည် (ဥပမာ — environment ရွေးချယ်ခြင်း၊ tool တွေ စစ်ဆေးခြင်း၊ data ပြင်ခြင်း၊ model လေ့ကျင့်ခြင်း)။
@@ -47,3 +57,6 @@
 **Hint** — `print()` ကို အဆင့်ဆင့် အသုံးပြုပြီး အဆင့်တိုင်းရဲ့ နံပါတ်ကို ထည့်ပါ။
 
 **Expected behavior** — Run လိုက်လျှင် AI agent တည်ဆောက်ရန် အဆင့်များကို စနစ်တကျ ရှင်းပြတဲ့ အထွက်တွေ ပေါ်လာပါမည်။
+
+**Hints:** `print()` ကို အသုံးပြပြီး အဆင့်တိုင်းရှေ့မှာ နံပါတ် (ဥပမာ `1.`, `2.`) ထည့်ရေးပါ။
+

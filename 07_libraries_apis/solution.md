@@ -2,7 +2,7 @@
 
 ## လေ့ကျင့်ခန်း ၁ — Built-in Module သုံးခြင်း
 
-အဓိက idea: Built-in module ကို `import` လုပ်ရုံနဲ့ သုံးလို့ရပါတယ်။
+**အဓိကအယူအဆ** — Built-in module ကို `import` လုပ်ရုံနဲ့ သုံးလို့ရပါတယ်။
 
 ```python
 # Import the built-in math module
@@ -20,7 +20,7 @@ print(math.pi)  # Expected output: 3.141592653589793
 
 ## လေ့ကျင့်ခန်း ၂ — External Package Install လုပ်ခြင်း
 
-အဓိက idea: External package ကို အရင် install လုပ်မှ import လုပ်လို့ရပါတယ်။
+**အဓိကအယူအဆ** — External package ကို အရင် install လုပ်မှ import လုပ်လို့ရပါတယ်။
 
 Terminal မှာ ရိုက်ပါ —
 
@@ -42,7 +42,7 @@ print(requests.__version__)  # Expected output: e.g. 2.31.0
 
 ## လေ့ကျင့်ခန်း ၃ — API ကနေ Data ယူခြင်း
 
-အဓိက idea: `requests.get()` နဲ့ API ကို ခေါ်ပြီး `.json()` နဲ့ Python dictionary အဖြစ် ပြောင်းပါ။
+**အဓိကအယူအဆ** — `requests.get()` နဲ့ API ကို ခေါ်ပြီး `.json()` နဲ့ Python dictionary အဖြစ် ပြောင်းပါ။
 
 ```python
 # Import the requests package
@@ -68,7 +68,7 @@ print("USD to JPY:", rates["JPY"])  # Expected output: e.g. 151.5
 
 ## လေ့ကျင့်ခန်း ၄ — API Key ကို လုံခြုံစွာ သုံးခြင်း
 
-အဓိက idea: API key ကို code ထဲမှာ မရေးဘဲ `.env` file ထဲမှာ သိမ်းပါ။
+**အဓိကအယူအဆ** — API key ကို code ထဲမှာ မရေးဘဲ `.env` file ထဲမှာ သိမ်းပါ။
 
 အရင် `pip install python-dotenv` လုပ်ပါ။ `.env` file ထဲမှာ —
 
@@ -97,7 +97,7 @@ print(api_key)  # Expected output: hello123
 
 ## လေ့ကျင့်ခန်း ၅ — API Data ကို pandas နဲ့ Analyze လုပ်ခြင်း
 
-အဓိက idea: API data ကို `pandas` DataFrame အဖြစ် ပြောင်းလိုက်ရင် table လို ကိုင်တွယ်လို့ရပါတယ်။
+**အဓိကအယူအဆ** — API data ကို `pandas` DataFrame အဖြစ် ပြောင်းလိုက်ရင် table လို ကိုင်တွယ်လို့ရပါတယ်။
 
 ```python
 # Import requests and pandas
@@ -123,7 +123,7 @@ print(df[["name", "email"]])
 
 ## လေ့ကျင့်ခန်း ၆ — AI Agent အတွက် Data Pipeline (Bonus)
 
-အဓိက idea: API ကနေ data ယူပြီး AI agent ကို feed လုပ်နိုင်တဲ့ format တစ်ခု ဖန်တီးပါ။
+**အဓိကအယူအဆ** — API ကနေ data ယူပြီး AI agent ကို feed လုပ်နိုင်တဲ့ format တစ်ခု ဖန်တီးပါ။
 
 ```python
 # Import the requests package

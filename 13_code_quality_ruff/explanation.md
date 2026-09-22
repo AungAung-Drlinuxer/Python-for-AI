@@ -19,13 +19,13 @@ Ruff က code ဖိုင်တစ်ခုကို ဖတ်၍ PEP 8 style r
 ```python
 # Before Ruff formatting (messy style)
 def add(a,b):
-    return a+b
+ return a+b
 ```
 
 ```python
 # After Ruff formatting (clean PEP 8 style)
 def add(a, b):
-    return a + b
+ return a + b
 ```
 
 ### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ
@@ -88,8 +88,8 @@ import os   # unused import - Ruff will warn
 import math
 
 def area(radius):
-    x = 5   # unused variable - Ruff will warn
-    return math.pi * radius ** 2
+ x = 5   # unused variable - Ruff will warn
+ return math.pi * radius ** 2
 
 # Expected: Ruff marks the unused import and variable
 ```
@@ -122,21 +122,21 @@ Save နှိပ်သည့်အခါ Ruff က code တစ်ခုလုံ
 ```python
 # Before: style problems
 def get_message(name):
-    full="Hello, "+name
-    return full
+ full="Hello, "+name
+ return full
 def shout( text ):
-    return text.upper()
+ return text.upper()
 ```
 
 ```python
 # After Ruff formatting: clean PEP 8 style
 def get_message(name):
-    full = "Hello, " + name
-    return full
+ full = "Hello, " + name
+ return full
 
 
 def shout(text):
-    return text.upper()
+ return text.upper()
 ```
 
 ### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ

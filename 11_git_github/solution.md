@@ -2,7 +2,7 @@
 
 ## Exercise ၁ — Version မှတ်တမ်း စနစ်တကျ ရေးခြင်း
 
-အဓိကအယူအဆ — Git က လုပ်တာက version တွေကို စနစ်တကျ မှတ်တမ်းတင်တာ ဖြစ်တယ်။
+**အဓိကအယူအဆ** — Git က လုပ်တာက version တွေကို စနစ်တကျ မှတ်တမ်းတင်တာ ဖြစ်တယ်။
 
 ```python
 # Keep a record of file versions like Git does
@@ -14,7 +14,7 @@ history = [
 
 # Print every saved version
 for entry in history:
-    print(f"Version {entry['version']} ({entry['date']}): {entry['message']}")
+ print(f"Version {entry['version']} ({entry['date']}): {entry['message']}")
 
 # Expected output:
 # Version 1 (2024-01-05): first version of train.py
@@ -24,7 +24,7 @@ for entry in history:
 
 ## Exercise ၂ — Git Command စာရင်း ဖန်တီးခြင်း
 
-အဓိကအယူအဆ — တကယ်လိုအပ်တဲ့ Git command က ၅-၆ ခုပဲ ရှိတယ်။
+**အဓိကအယူအဆ** — တကယ်လိုအပ်တဲ့ Git command က ၅-၆ ခုပဲ ရှိတယ်။
 
 ```python
 # The essential Git commands for a beginner
@@ -38,7 +38,7 @@ commands = {
 
 # Print each command with its purpose
 for name, desc in commands.items():
-    print(f"{name:15} -> {desc}")
+ print(f"{name:15} -> {desc}")
 
 # Expected output:
 # git status      -> See which files changed
@@ -50,12 +50,12 @@ for name, desc in commands.items():
 
 ## Exercise ၃ — Repository URL ဆောက်ခြင်း
 
-အဓိကအယူအဆ — GitHub repository တိုင်းမှာ ပုံမှန် URL ပုံစံ တစ်ခု ရှိတယ်။
+**အဓိကအယူအဆ** — GitHub repository တိုင်းမှာ ပုံမှန် URL ပုံစံ တစ်ခု ရှိတယ်။
 
 ```python
 def make_repo_url(username, repo_name):
     # Build the standard GitHub repository address
-    return f"https://github.com/{username}/{repo_name}"
+ return f"https://github.com/{username}/{repo_name}"
 
 # Test the function with different names
 print(make_repo_url("aung", "chat-bot"))
@@ -68,7 +68,7 @@ print(make_repo_url("mya", "image-classifier"))
 
 ## Exercise ၄ — Clone လုပ်မယ့် Project ရွေးချယ်ခြင်း
 
-အဓိကအယူအဆ — အခြားသူရဲ့ project တွေထဲကမှ စိတ်ဝင်စားစရာကောင်းတာ ရွေးတတ်ဖို့ လိုတယ်။
+**အဓိကအယူအဆ** — အခြားသူရဲ့ project တွေထဲကမှ စိတ်ဝင်စားစရာကောင်းတာ ရွေးတတ်ဖို့ လိုတယ်။
 
 ```python
 # A list of AI projects found on GitHub
@@ -78,15 +78,16 @@ projects = [
     {"name": "data-cleaner", "stars": 900, "language": "Python"},
 ]
 
+# Define the helper BEFORE using it
+def make_repo_url(username, repo_name):
+    # Helper to build a GitHub URL
+ return f"https://github.com/{username}/{repo_name}"
+
 # Find the project with the most stars
 best = max(projects, key=lambda p: p["stars"])
 
 print(f"Recommended project: {best['name']} ({best['stars']} stars)")
 print(f"Clone it with: git clone {make_repo_url('user', best['name'])}.git")
-
-def make_repo_url(username, repo_name):
-    # Helper to build a GitHub URL
-    return f"https://github.com/{username}/{repo_name}"
 
 # Expected output:
 # Recommended project: chat-bot-kit (5100 stars)
@@ -95,7 +96,7 @@ def make_repo_url(username, repo_name):
 
 ## Exercise ၅ — Commit Message စစ်ဆေးခြင်း
 
-အဓိကအယူအဆ — ကောင်းတဲ့ commit message က နောက်ကြည့်တဲ့အခါ ဘာပြင်ခဲ့လဲ ပြောပြနိုင်ရတယ်။
+**အဓိကအယူအဆ** — ကောင်းတဲ့ commit message က နောက်ကြည့်တဲ့အခါ ဘာပြင်ခဲ့လဲ ပြောပြနိုင်ရတယ်။
 
 ```python
 def check_commit_message(message):
@@ -107,6 +108,7 @@ def check_commit_message(message):
     if len(message) > 100:
         return "Invalid: message is too long"
     return "Valid"
+
 
 # Test with different messages
 print(check_commit_message(""))                  # Empty message
@@ -121,7 +123,7 @@ print(check_commit_message("fix data loading bug"))  # Good message
 
 ## Exercise ၆ — AI Project Backup Plan
 
-အဓိကအယူအဆ — AI project တစ်ခုကို Git နဲ့ GitHub မှာ backup လုပ်တဲ့ အဆင့်တွေက command အနည်းငယ်နဲ့ပဲ ပြီးတယ်။
+**အဓိကအယူအဆ** — AI project တစ်ခုကို Git နဲ့ GitHub မှာ backup လုပ်တဲ့ အဆင့်တွေက command အနည်းငယ်နဲ့ပဲ ပြီးတယ်။
 
 ```python
 # Files in our

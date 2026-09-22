@@ -25,6 +25,8 @@ print(book_b.author)  # Mary
 
 ---
 
+အဓိကအယူအဆ — `__init__` method က object ဖန်တီးစဉ် title နှင့် author ကဲ့သို့ attributes များကို object စီအတွက် သီးသန့်သတ်မှတ်ပေးသည်။
+
 ## ၂ — Method ထည့်ခြင်း
 
 Method တစ်ခုချင်းစီရဲ့ ပထမ parameter က `self` ဖြစ်ပြီး object ရဲ့ attributes တွေကို ယူသုံးနိုင်ပါတယ်။
@@ -39,11 +41,14 @@ class Book:
         # Return a formatted description using attributes
         return f"{self.title} by {self.author}"
 
+
 book = Book("Python Basics", "John")
 print(book.describe())  # Python Basics by John
 ```
 
 ---
+
+အဓိကအယူအဆ — Method တစ်ခုချင်းစီရဲ့ ပထမ parameter က `self` ဖြစ်ပြီး ယင်းမှတဆင့် object ရဲ့ attributes တွေကို ယူသုံးနိုင်ပါတယ်။
 
 ## ၃ — Attribute ပြောင်းလဲနိုင်တဲ့ Class
 
@@ -67,6 +72,8 @@ print(counter.add())  # 3
 ```
 
 ---
+
+အဓိကအယူအဆ — Object တစ်ခုထဲက attribute (ဥပမာ `count`) က class ရဲ့ state အဖြစ် သီးခြားရှိနေပြီး method တိုင်း ခေါ်တိုင်း အဲဒီ state ကို ပြောင်းလဲပြီး အသစ်ရရှိနိုင်ပါတယ်။
 
 ## ၄ — AI Client Class
 
@@ -92,6 +99,8 @@ print(client_b.generate("What is AI?"))  # Response to: What is AI?
 ```
 
 ---
+
+အဓိကအယူအဆ — class တစ်ခုကနေ object တွေကို ဖန်တီးတိုင်း `self.api_key` လိုမျိုး ကိုယ်ပိုင် attribute သီးသန့် ခွဲခံရပြီး မတူညိုတဲ့ key နှစ်ခုနဲ့ object နှစ်ခု ဖန်တီးလို့ရတယ်ဆိုတာ ဖြစ်ပါတယ်။
 
 ## ၅ — Inheritance
 
@@ -120,3 +129,34 @@ print(model.chat("Hi there"))    # gpt-mini replies to: Hi there
 ---
 
 ##
+
+အဓိကအယူအဆ — Child class က parent class ရဲ့ attributes နှင့် methods အားလုံးကို ဆက်ခံရပြီး လိုအပ်သည့် method အသစ်များကိုသာ ထပ်ထည့်ရေးနိုင်ပါတယ်။
+
+## ၆ — Data Pipeline တစ်ခု Class နဲ့ ရေးပါ
+```python
+class DataPipeline:
+    def __init__(self):
+        # Start with an empty list to store texts
+        self.texts = []
+
+    def add(self, text):
+        # Append the given text to the list
+        self.texts.append(text)
+
+    def process(self):
+        # Return the character count of each text as a list
+        return [len(text) for text in self.texts]
+
+
+# Example usage
+pipeline = DataPipeline()
+pipeline.add("hello ai")
+pipeline.add("python class")
+print(pipeline.process())
+
+# Expected output:
+# [7, 12]
+```
+
+**အဓိကအယူအဆ** — `add()` နဲ့ text တွေကို list ထဲမှာ သိမ်းထားပြီး `process()` မှာ list comprehension နဲ့ `len()` ကို တွဲသုံးကာ တစ်ခုချင်းစီရဲ့ စာလုံးအရေအတွက်ကို list အဖြစ် ပြန်ထုတ်တာက အဓိကပါ။
+

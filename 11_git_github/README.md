@@ -36,7 +36,7 @@ Git မှာ command အများကြီး ရှိပေမယ့် �
 
 ## Reference Links
 
-- Version Control: https://python.datalumina.com/version-control
-- GitHub Setup: https://python.datalumina.com/github-setup
-- Clone & Create: https://python.datalumina.com/clone-create
-- VS Code Git: https://python.datalumina.com/vscode-git
+- Version Control: https://python.datalumina.com/tools/git/version-control
+- GitHub Setup: https://python.datalumina.com/tools/git/github-setup
+- Clone & Create: https://python.datalumina.com/tools/git/clone-create
+- VS Code Git: https://python.datalumina.com/tools/git/vscode-git

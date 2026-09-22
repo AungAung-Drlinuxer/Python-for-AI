@@ -20,10 +20,10 @@ Project တစ်ခုကို folder သပ်သပ်ခွဲပါတယ�
 
 ```text
 sales_analysis/
-    data/
-        sales.csv
-    output/
-    analysis.py
+ data/
+ sales.csv
+ output/
+ analysis.py
 ```
 
 ### ဥပမာ
@@ -72,7 +72,7 @@ print(data_file)
 
 ### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ
 
-Program တစ်ခုက မတူတဲ့ computer တွေမှာ အလုပ်လုပ်ဖို့ အတွက် path ကို မှန်ကန်စွာ handle ရပါတယ်။ Windows နဲ့ Mac/Linux က path ရေးပုံ မတူလို့ `pathlib` သုံးတာ အစိတ်ရှင်းပါတယ်။
+Program တစ်ခုက မတူတဲ့ computer တွေမှာ အလုပ်လုပ်ဖို့ အတွက် path ကို မှန်ကန်စွာ handle ရပါတယ်။ Windows နဲ့ Mac/Linux က path ရေးပုံ မတူလို့ `pathlib` သုံးတာ အဆင်ပြေပါတယ်။
 
 ## ၃။ Working with Files (CSV, JSON)
 
@@ -119,7 +119,7 @@ result = {"total": 8000}
 
 # Save the result as a JSON file
 with open("output/summary.json", "w") as f:
-    json.dump(result, f, indent=2)
+ json.dump(result, f, indent=2)
 print("Saved to output/summary.json")
 ```
 
@@ -146,7 +146,7 @@ Function တစ်ခုကို အလုပ်တစ်ခု အာရုံ
 ```python
 def calculate_total(rows):
     # Sum up all the amounts
-    return sum(int(row["amount"]) for row in rows)
+ return sum(int(row["amount"]) for row in rows)
 
 rows = [{"product": "coffee", "amount": "5000"},
         {"product": "tea", "amount": "3000"}]

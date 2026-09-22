@@ -20,14 +20,14 @@ import subprocess
 # Run "git status" to see which files changed
 result = subprocess.run(
     ["git", "status"],
-    capture_output=True,
-    text=True
+ capture_output=True,
+ text=True
 )
 print(result.stdout)
 # Expected output:
 # On branch main
 # Changes not staged for commit:
-#   modified:   train_model.py
+# modified: train_model.py
 ```
 
 ဒီဥပမာမှာ `train_model.py` ဆိုတဲ့ file ကို ပြင်ရေးထားပြီးလို့ Git က သတိပေးထားတာ ဖြစ်တယ်။ ဒါက version control ရဲ့ အခြေခံ လုပ်ဆောင်ချက် ဖြစ်တယ်။
@@ -133,7 +133,7 @@ workflow = [
 ]
 
 for step in workflow:
-    print(step)
+ print(step)
 
 # Expected output:
 # 1. Edit train_model.py in VS Code

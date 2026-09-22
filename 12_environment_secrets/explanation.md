@@ -76,9 +76,9 @@ import os
 api_key = os.environ.get("MY_API_KEY")
 
 if api_key:
-    print("API key ready.")
+ print("API key ready.")
 else:
-    print("API key not found. Set MY_API_KEY first.")
+ print("API key not found. Set MY_API_KEY first.")
 # Expected output (if set): API key ready.
 ```
 
@@ -169,8 +169,8 @@ Project structure တစ်ခုရဲ့ ပုံစံ —
 my_ai_project/
     .env
     .gitignore
-    main.py
-    requirements.txt
+ main.py
+ requirements.txt
 ```
 
 Team မှာ တွဲလုပ်တဲ့အခါ `.env` အစား `.env.example` ဆိုတဲ့ sample file တစ်ခု တင်ပြီး key တွေရဲ့ ပုံစံကိုပဲ မျှဝေပါတယ် —
@@ -189,3 +189,63 @@ GitHub ပေါ်မှာ API key တင်မိလို့ နာမည်
 - Environment variable က key ကို code အပြင်ဘက်မှာ သိမ်းခြင်းနည်းပါ။
 - Local development အတွက် `.env` file နည်းက အလွယ်ကူဆုံးပါ။
 - `.env` ကို `.gitignore` နဲ့ အမြဲ ကာကွယ်ပါ။
+
+## ထပ်ဆောင်း လက်တွေ့ ဥပမာများ
+
+### ဥပမာ ၁ — .env ဖိုင်မှ တန်ဖိုးများ ဖတ်ခြင်း
+python-dotenv စာကြည့်တိုက်ကို အသုံးပြုပြီး .env ဖိုင်ထဲက environment variable များကို Python program တစ်ခုအတွင်း ဖတ်ယူပုံကို ဤဥပမာက ပြသသည်။
+```python
+from dotenv import load_dotenv
+import os
+
+# Load variables from the .env file into the environment
+load_dotenv()
+
+# Read the value of DATABASE_URL from the .env file
+database_url = os.environ.get("DATABASE_URL")
+
+print(f"Connecting to: {database_url}")
+# Expected output: Connecting to: postgres://localhost/mydb
+```
+
+### ဥပမာ ၂ — Default တန်ဖိုး သတ်မှတ်ခြင်း
+environment variable မရှိပါက default တန်ဖိုးကို အသုံးပြုပြီး program မ crash စေဘဲ ဆက်လက်လည်ပတ်နိုင်ပုံကို ဤဥပမာက ပြသသည်။
+```python
+import os
+
+# Provide a fallback value when the variable is not set
+debug_mode = os.environ.get("DEBUG_MODE", "false")
+
+# Provide a fallback port number for the web server
+port = int(os.environ.get("PORT", "8000"))
+
+print(f"Debug mode: {debug_mode}")
+print(f"Server running on port: {port}")
+# Expected output: Debug mode: false
+# Expected output: Server running on port: 8000
+```
+
+### ဥပမာ ၃ — Secret များကို Git ထဲ မထည့်တော့ပါနှင့်
+.gitignore ဖိုင်ထဲ .env ကို ထည့်ထားခြင်းဖြင့် secret များ Git repository ထဲ ရောက်သွားခြင်းမှ ကာကွယ်ပုံကို ဤဥပမာက ပြသသည်။
+```python
+# Save this content in a file named .gitignore (not Python code)
+# --- content of .gitignore ---
+# .env
+# --- end of file ---
+
+import os
+from dotenv import load_dotenv
+
+# Verify that secrets are loaded from .env, not from the code itself
+load_dotenv()
+
+api_key = os.environ.get("API_KEY")
+if api_key:
+    print("API key loaded successfully.")
+else:
+    print("API key is missing.")
+# Expected output: API key loaded successfully.
+```
+
+### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ
+လက်တွေ့ project များတွင် API key၊ database password နှင့် token များကို code ထဲတွင် တိုက်ရိုက်ရေးသွင်းခြင်းသည် လုံခြုံမှုအခြေအနေ ဆိုးရွားစေသည်။ ထိုသို့ရေးသွင်းထားသော secret များကို Git history ထဲမှ ရှင်းလင်းဖို့ ခက်ခဲပြီး တစ်ခါ leak ဖြစ်သွားပါက password အသစ်များ ပြောင်းရန် ပင်ပန်းရသည်။ .env ဖိုင်နှင့် python-dotenv ကို အသုံးပြုခြင်းဖြင့် secret များကို code မှ သီးခြားခွဲထားနိုင်ပြီး .env.example ကဲ့သို့ နမူနာဖိုင်တစ်ခုကိုသာ Git ထဲ တင်ပေးနိုင်သည်။ ထို့ကြောင့် အဖွဲ့ဝင်အားလုံးက လိုအပ်သော variable များကို သိနိုင်ပြီး secret တွေကတော့ လုံခြုံစွာ ရှိနေမည်ဖြစ်သည်။

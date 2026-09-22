@@ -32,7 +32,7 @@
 
 ## Reference
 
-- Project Structure: https://python.datalumina.com/project-structure
-- Python Paths: https://python.datalumina.com/python-paths
-- Working with Files: https://python.datalumina.com/working-with-files
-- Organizing Code: https://python.datalumina.com/organizing-code
+- Project Structure: https://python.datalumina.com/practical-python/project-structure
+- Python Paths: https://python.datalumina.com/practical-python/python-paths
+- Working with Files: https://python.datalumina.com/practical-python/working-with-files
+- Organizing Code: https://python.datalumina.com/practical-python/organizing-code

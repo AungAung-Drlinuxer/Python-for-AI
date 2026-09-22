@@ -33,7 +33,7 @@ Python မှာ data အများကြီးကို တစ်နေရာ
 
 ## Reference Links
 
-- Lists: https://python.datalumina.com/lists
-- Dictionaries: https://python.datalumina.com/dictionaries
-- Tuples: https://python.datalumina.com/tuples
-- Sets: https://python.datalumina.com/sets
+- Lists: https://python.datalumina.com/data-structures/lists
+- Dictionaries: https://python.datalumina.com/data-structures/dictionaries
+- Tuples: https://python.datalumina.com/data-structures/tuples
+- Sets: https://python.datalumina.com/data-structures/sets

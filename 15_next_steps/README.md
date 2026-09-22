@@ -28,9 +28,9 @@
 
 ## Reference Links
 
-- Course Summary: https://python.datalumina.com/
-- Feedback: https://python.datalumina.com/
-- Continue Learning: https://python.datalumina.com/
+- Course Summary: https://python.datalumina.com/next-steps/course-summary
+- Feedback: https://python.datalumina.com/next-steps/feedback
+- Continue Learning: https://python.datalumina.com/next-steps/ai-agents
 
 ## နိဂုံးချုပ်
 

@@ -22,7 +22,7 @@
 
 ## လိုအပ်ချက်များ (Prerequisites)
 
--  programming အတွေ့အကြုံ လုံးဝမလိုဘူး — ဒီသင်တန်းက အစအလယ် ကျောင်းသားတွေအတွက် ဖြစ်ပါတယ်
+- programming အတွေ့အကြုံ လုံးဝမလိုဘူး — ဒီသင်တန်းက အစအလယ် ကျောင်းသားတွေအတွက် ဖြစ်ပါတယ်
 - ကွန်ပျူတာတစ်လုံး (Windows, Mac ဒါမှမဟုတ် Linux)
 - သင်ခန်းစာတွေကို လက်တွေ့ လိုက်လုပ်ဖို့ ဆန္ဒရှိမှု
 
@@ -32,5 +32,5 @@
 
 ## Reference Links
 
-- Course Welcome: https://python.datalumina.com/
+- Course Welcome: https://python.datalumina.com/introduction/welcome
 - သင်တန်း၏ တရားဝင် စာမျက်နှာများ (welcome, is-this-for-you, how-to-follow, why-python, ai-assistants) ကို အပေါ်မှာဖော်ပြထားသော site တွင် ကြည့်ပါ။

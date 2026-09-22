@@ -39,10 +39,10 @@ ValueError: invalid literal for int() with base 10: 'abc'
 # Missing colon after 'if' causes a SyntaxError
 x = 10
 if x > 5
-    print("big")
+ print("big")
 # Correct version:
 # if x > 5:
-#     print("big")
+# print("big")
 ```
 
 ```
@@ -105,12 +105,12 @@ hello5
 # Handled version: with try/except
 try:
     # Try to open and read the file
-    file = open("data.txt")
-    print(file.read())
-    file.close()
+ file = open("data.txt")
+ print(file.read())
+ file.close()
 except FileNotFoundError:
     # This runs only if the file is missing
-    print("File not found. Skipping...")
+ print("File not found. Skipping...")
 
 # The program keeps running and reaches here
 print("Done!")

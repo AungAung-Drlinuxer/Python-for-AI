@@ -27,7 +27,7 @@ score = 95
 
 # 2. A simple function
 def describe_student(name, score):
-    return f"{name} scored {score} points"
+ return f"{name} scored {score} points"
 
 # 3. Calling the function
 print(describe_student(name, score))
@@ -66,7 +66,7 @@ feedback = {
 
 # Print each feedback item clearly
 for key, value in feedback.items():
-    print(f"{key}: {value}")
+ print(f"{key}: {value}")
 # Expected output:
 # overall_experience: Good
 # hardest_topic: Functions

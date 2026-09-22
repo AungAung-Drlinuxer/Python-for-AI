@@ -16,7 +16,7 @@ skills = [
 
 # Print each skill one by one
 for skill in skills:
-    print(skill)
+ print(skill)
 # Expected output:
 # Variables and data types
 # Functions
@@ -24,6 +24,8 @@ for skill in skills:
 # Dictionaries
 # AI basics with Python
 ```
+
+အဓိကအယူအဆ — list တစ်ခုထဲရှိ skills များကို `for` loop ဖြင့် တစ်ခုချင်း ထုတ်ပြခြင်း ဖြစ်သည်။
 
 ## လေ့ကျင့်ခန်း ၂ — မိမိ Course Recap Function
 
@@ -48,6 +50,8 @@ print(recap("java"))
 # Expected output: Unknown topic
 ```
 
+အဓိကအယူအဆ — `if/elif/else` ဖြင့် topic အလိုက် ကွဲပြားသော recap စာသား ပြန်ပေးခြင်း ဖြစ်သည်။
+
 ## လေ့ကျင့်ခန်း ၃ — Feedback Form
 
 အဓိကအကြောင်းအရာမှာ dictionary ဖန်တီးပြီး `.items()` ဖြင့် loop လုပ်ခြင်း ဖြစ်ပါသည်။
@@ -62,12 +66,14 @@ feedback = {
 
 # Print each key and value pair
 for key, value in feedback.items():
-    print(f"{key}: {value}")
+ print(f"{key}: {value}")
 # Expected output:
 # overall: Good
 # hardest_topic: Functions
 # suggestion: Add more exercises
 ```
+
+အဓိကအယူအဆ — dictionary ထဲရှိ key–value များကို `.items()` ဖြင့် loop လုပ်၍ ထုတ်ပြခြင်း ဖြစ်သည်။
 
 ## လေ့ကျင့်ခန်း ၄ — Feedback Rating စစ်ဆေးခြင်း
 
@@ -87,6 +93,8 @@ print(check_rating(5))
 print(check_rating(9))
 # Expected output: Invalid rating
 ```
+
+အဓိကအယူအဆ — rating သည် 1 မှ 5 အတွင်း ရှိမရှိကို chained comparison ဖြင့် စစ်ဆေးခြင်း ဖြစ်သည်။
 
 ## လေ့ကျင့်ခန်း ၅ — Simple AI Agent (အလွယ်)
 
@@ -111,6 +119,8 @@ print(simple_agent("dance"))
 # Expected output: Unknown command
 ```
 
+အဓိကအယူအဆ — `in` operator ဖြင့် command ထဲရှိ စာလုံးရှိမရှိ စစ်ပြီး သင့်လျော်သော အဖြေပြန်ခြင်း ဖြစ်သည်။
+
 ## လေ့ကျင့်ခန်း ၆ — Agent Task List
 
 အဓိကအကြောင်းအရာမှာ task list တစ်ခုကို loop ဖြင့် လုပ်ဆောင်ပြီး agent function ကို တစ်ခုချင်း ခေါ်ခြင်း ဖြစ်ပါသည်။
@@ -125,11 +135,12 @@ def simple_agent(command):
     else:
         return "Unknown command"
 
+
 # A list of tasks for the agent
 tasks = [
     "say hello to the user",
     "create a summary of the lesson",
-    "delete all files"
+    "delete all files",
 ]
 
 # Process each task through the agent
@@ -139,7 +150,7 @@ for task in tasks:
     print(f"Agent: {response}")
 # Expected output:
 # Task: say hello to the user
-# Agent: Hello! I am your agent.
+# Agent: Hello! I am your agent!
 # Task: create a summary of the lesson
 # Agent: Summary feature
 # Task: delete all files
@@ -147,3 +158,6 @@ for task in tasks:
 ```
 
 ဤဖြေရှင်းချက်များကို လေ့လာပြီးပါက သင်ခန်းကြားမှု၏ အဓိက skills များကို အတည်ပြုနိုင်ပြီး၊ AI agents ဆက်လက်သင်ယူရန် အသင့်ပြင်ဆင်နိုင်ပါသည်။
+
+အဓိကအယူအဆ — task list တစ်ခုကို loop ဖြင့် လည့်ပတ်ပြီး agent function ကို တစ်ခုချင်း ခေါ်၍ တုံ့ပြန်ချက် ထုတ်ပြခြင်း ဖြစ်သည်။
+

@@ -157,7 +157,7 @@ Sum of numbers: 15
 
 **ဥပမာ**
 
-```python
+```pycon
 >>> 2 + 3
 5
 >>> "AI" + " learner"

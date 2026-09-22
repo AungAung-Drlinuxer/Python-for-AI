@@ -28,5 +28,5 @@ AI project တွေမှာ user input၊ file ဖတ်တာ၊ API ခေ�
 
 ## References
 
-- try/except: https://python.datalumina.com/learn/python-basics/try-except
-- Common errors: https://python.datalumina.com/learn/python-basics/common-errors
+- try/except: https://python.datalumina.com/advanced/error-handling/try-except
+- Common errors: https://python.datalumina.com/advanced/error-handling/common-errors

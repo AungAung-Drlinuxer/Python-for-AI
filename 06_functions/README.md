@@ -29,7 +29,7 @@
 
 ## References
 
-- Defining Functions: https://python.datalumina.com/defining-functions
-- Parameters: https://python.datalumina.com/parameters
-- Return Values: https://python.datalumina.com/return-values
-- ဒီ course ရဲ့ ပင်မ page: https://python.datalumina.com/
+- Defining Functions: https://python.datalumina.com/functions/defining-functions
+- Parameters: https://python.datalumina.com/functions/parameters
+- Return Values: https://python.datalumina.com/functions/return-values
+- Reference course homepage: https://python.datalumina.com/

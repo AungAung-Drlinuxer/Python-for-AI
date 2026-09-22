@@ -8,7 +8,7 @@
 
 ### ဘာကို ဆိုလိုတာလဲ
 
-Function ဆိုတာ code command တွေကို အမည်တစ်ခုနဲ့ စုထားတဲ့ block တစ်ခုဖြစ်တယ်။ မှာယူထားတဲ့ ဟင်းချက်နည်း (recipe) လိုမျိုး — တစ်ခေါက် ရေးပြီးရင် အမည်နဲ့ ခေါ်ရုံပဲ။
+Function ဆိုတာ code command တွေကို အမည်တစ်ခုနဲ့ စုထားတဲ့ block တစ်ခုဖြစ်တယ်။ လိုက်နာနိုင်တဲ့ ဟင်းချက်နည်း (recipe) လိုမျိုး — တစ်ခေါက် ရေးပြီးရင် အမည်နဲ့ ခေါ်ရုံပဲ။
 
 ### ဘာကြောင့် လဲ
 
@@ -16,14 +16,14 @@ Function ဆိုတာ code command တွေကို အမည်တစ်�
 
 ### ဘယ်လို အလုပ်လုပ်လဲ
 
-`def` keyword နဲ့ စပြီး အမည်ပေး၊ ကောက်ကြောင်း `(` `)` နဲ့ colon `:` တင်ရတယ်။ အောက်မှာ indent လုပ်ထားတဲ့ code တွေက function ရဲ့ ကိုယ်ထည်ဖြစ်တယ်။ ခေါ်သုံးချင်ရင် အမည်နောက်မှာ `()` ထည့်ပြီး ခေါ်ရတယ်။
+`def` keyword နဲ့ စပြီး အမည်ပေး၊ ကောက်ကွင်း `(` `)` နဲ့ colon `:` တင်ရတယ်။ အောက်မှာ indent လုပ်ထားတဲ့ code တွေက function ရဲ့ ကိုယ်ထည်ဖြစ်တယ်။ ခေါ်သုံးချင်ရင် အမည်နောက်မှာ `()` ထည့်ပြီး ခေါ်ရတယ်။
 
 ### ဥပမာ
 
 ```python
 # Define a simple function with no parameters
 def greet():
-    print("Hello from the function!")
+ print("Hello from the function!")
 
 # Call the function twice
 greet()
@@ -51,14 +51,14 @@ Parameter မပါရင် function တစ်ခုက အမြဲတမ်�
 
 ### ဘယ်လို အလုပ်လုပ်လဲ
 
-Function ရဲ့ ကောက်ကြောင်းထဲမှာ variable အမည်တွေ ရေးပြီး define လုပ်တယ်။ ခေါ်တဲ့အခါ တကယ့် တန်ဖိုး (argument) တွေ အစားထိုးပေးရတယ်။ Parameter တွေ တစ်ခုထက် ပိုလည်း ရေးလို့ရတယ်။
+Function ရဲ့ ကောက်ကွင်းထဲမှာ variable အမည်တွေ ရေးပြီး define လုပ်တယ်။ ခေါ်တဲ့အခါ တကယ့် တန်ဖိုး (argument) တွေ အစားထိုးပေးရတယ်။ Parameter တွေ တစ်ခုထက် ပိုလည်း ရေးလို့ရတယ်။
 
 ### ဥပမာ
 
 ```python
 # Define a function that takes two parameters
 def greet_person(name, greeting):
-    print(greeting + ", " + name + "!")
+ print(greeting + ", " + name + "!")
 
 # Call it with different arguments
 greet_person("Aung", "Hello")
@@ -93,8 +93,8 @@ Function ကိုယ်ထည်ထဲမှာ `return` keyword နောက�
 ```python
 # Define a function that returns a value
 def calculate_tax(price, rate):
-    tax = price * rate
-    return tax
+ tax = price * rate
+ return tax
 
 # Store the returned value and use it
 tax_amount = calculate_tax(10000, 0.05)

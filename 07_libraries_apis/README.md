@@ -50,6 +50,6 @@
 
 ## Reference Links
 
-- Importing Modules — https://python.datalumina.com/importing-modules/
-- Working with APIs — https://python.datalumina.com/working-with-apis/
-- Working with Data — https://python.datalumina.com/working-with-data/
+- Importing Modules — https://python.datalumina.com/libraries-apis/importing-modules
+- Working with APIs — https://python.datalumina.com/libraries-apis/working-with-apis
+- Working with Data — https://python.datalumina.com/libraries-apis/working-with-data

@@ -10,6 +10,8 @@
 
 **မျှော်မှန်းသည့် ရလဒ်:** skills ငါးခု တစ်ကြောင်းချင်း ပေါ်ပါမည်။
 
+**Expected behavior:** skills ငါးခုပါဝင်သော string list တစ်ခုကို ဖန်တီးပြီး `for` loop ဖြင့် iterate လုပ်သည့်အခါ skills တစ်ခုစီ၏ အမည်ကို တစ်ကြောင်းချင်း အောက်တွင်ပြသလို့  terminal ထဲတွင် အစီအစဉ်တကျ ပေါ်လာရမည်။
+
 ## လေ့ကျင့်ခန်း ၂ — မိမိ Course Recap Function
 
 **တာဝန်:** `recap(topic)` ဟူ၍ function တစ်ခုရေးပါ။ အကယ်၍ topic သည် "python" ဖြစ်ပါက "Python basics completed" ကို return ပါ။ "ai" ဖြစ်ပါက "AI fundamentals completed" ကို return ပါ။ အခြားအရာဖြစ်ပါက "Unknown topic" ကို return ပါ။
@@ -17,6 +19,8 @@
 **Hints:** `if`, `elif`, `else` များကို အသုံးပြုပါ။
 
 **မျှော်မှန်းသည့် ရလဒ်:** function ကို ခေါ်သည့်အခါ မှန်ကန်သော message ပြန်ပါမည်။
+
+**Expected behavior:** `recap("python")` ကို ခေါ်လျှင် "Python basics completed"၊ `recap("ai")` ကို ခေါ်လျှင် "AI fundamentals completed"၊ အခြား topic များအတွက်မူ "Unknown topic" ဟူသော message များကို အသီးသီး return ရရှိပါမည်။
 
 ## လေ့ကျင့်ခန်း ၃ — Feedback Form
 
@@ -26,6 +30,8 @@
 
 **မျှော်မှန်းသည့် ရလဒ်:** feedback သုံးကြောင်း ပေါ်ပါမည်။
 
+**Expected behavior:** `for` loop ဖြင့် `feedback.items()` ကို လှည့်လှည့်သည့်အခါ `"overall: ..."`၊ `"hardest_topic: ..."`၊ `"suggestion: ..."` ဟူ၍ key နှင့် value စပ်စပ်သော သုံးကြောင်း အစဉ်လိုက် terminal တွင် ပေါ်ပါမည်။
+
 ## လေ့ကျင့်ခန်း ၄ — Feedback Rating စစ်ဆေးခြင်း
 
 **တာဝန်:** `check_rating(rating)` ဟူ၍ function ရေးပါ။ rating သည် 1 မှ 5 အတွင်း ဖြစ်ပါက "Valid rating" ကို return ပါ။ မဟုတ်ပါက "Invalid rating" ကို return ပါ။
@@ -33,6 +39,8 @@
 **Hints:** `if 1 <= rating <= 5:` ပုံစံဖြင့် စစ်နိုင်ပါသည်။
 
 **မျှော်မှန်းသည့် ရလဒ်:** rating 5 ပေးပါက "Valid rating" ပြန်ပါမည်။ rating 9 ပေးပါက "Invalid rating" ပြန်ပါမည်။
+
+**Expected behavior:** `check_rating(5)` ကို ခေါ်ပါက "Valid rating" ဟူ၍ return ရရှိပြီး `check_rating(9)` ကို ခေါ်ပါက "Invalid rating" ဟူ၍ return ရရှိရမည်။
 
 ## လေ့ကျင့်ခန်း ၅ — Simple AI Agent (အလွယ်)
 
@@ -42,6 +50,8 @@
 
 **မျှော်မှန်းသည့် ရလဒ်:** `simple_agent("say hello")` ကို ခေါ်ပါက greeting ပြန်ပါမည်။
 
+**Expected behavior:** `simple_agent("say hello")` ကို ခေါ်ပါက greeting တစ်ခု ပြန်ရပြီး၊ `simple_agent("make a summary")` ကို ခေါ်ပါက "Summary feature" ပြန်ရပြီး၊ `simple_agent("do something")` ကဲ့သို့ အခြား command ဖြင့် ခေါ်ပါက "Unknown command" ပြန်ရပါမည်။
+
 ## လေ့ကျင့်ခန်း ၆ — Agent Task List
 
 **တာဝန်:** tasks ဟူ၍ list တစ်ခု (အနည်းဆုံး သုံးခု) ဖန်တီးပါ။ `for` loop ဖြင့် တစ်ခုချင်း လုပ်ဆောင်ပြီး၊ လေ့ကျင့်ခန်း ၅ မှ `simple_agent` function ကို အသုံးပြုပြီး တစ်ခုချင်းစီ၏ အဖြေကို print ထုတ်ပါ။
@@ -49,3 +59,6 @@
 **Hints:** ပုံမှန် for loop တစ်ခုဖြင့် လုံလောက်ပါသည်။
 
 **မျှော်မှန်းသည့် ရလဒ်:** task တစ်ခုချင်းစီအတွက် agent ၏ တုံ့ပြန်မှု ပေါ်ပါမည်။
+
+**Expected behavior:** task list ရှိ task သုံးခုစလုံးအတွက် အစီအစဉ်အတိုင်း agent ၏ တုံ့ပြန်မှုများကို တစ်ခုချင်းစီ အောင်မြင်စွာ print ထုတ်ပြသမြင်ရမည်။
+

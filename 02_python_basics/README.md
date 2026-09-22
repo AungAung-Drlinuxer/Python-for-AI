@@ -38,12 +38,12 @@ Python ဘာသာစကားရဲ့ အခြေခံအုတ်မြစ
 
 ## Reference Links
 
-- Intro to Programming: https://python.datalumina.com/intro-to-programming
-- Python Syntax: https://python.datalumina.com/python-syntax
-- Python Errors: https://python.datalumina.com/python-errors
-- Formatting: https://python.datalumina.com/formatting
-- Variables: https://python.datalumina.com/variables
-- Comments: https://python.datalumina.com/comments
-- Operators: https://python.datalumina.com/operators
-- String Manipulation: https://python.datalumina.com/string-manipulation
-- Loops: https://python.datalumina.com/loops
+- Intro to Programming: https://python.datalumina.com/basics/intro-to-programming
+- Python Syntax: https://python.datalumina.com/basics/python-syntax
+- Python Errors: https://python.datalumina.com/basics/python-errors
+- Formatting: https://python.datalumina.com/basics/formatting
+- Variables: https://python.datalumina.com/basics/variables
+- Comments: https://python.datalumina.com/basics/comments
+- Operators: https://python.datalumina.com/basics/operators
+- String Manipulation: https://python.datalumina.com/basics/string-manipulation
+- Loops: https://python.datalumina.com/basics/loops

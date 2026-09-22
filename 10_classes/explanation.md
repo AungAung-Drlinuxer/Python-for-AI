@@ -23,7 +23,7 @@ Python မှာ class ကို `class` keyword နဲ့ ရေးပါတယ
 ```python
 # Define a simple class as a blueprint
 class Student:
-    pass
+ pass
 
 # Create objects (instances) from the class
 student_a = Student()
@@ -113,7 +113,7 @@ class ChatModel(AIModel):
 # ChatModel can use both inherited and new methods
 model = ChatModel("gpt-mini")
 print(model.describe())            # Model: gpt-mini
-print(model.chat("Hi there"))     # gpt-mini says: reply to 'Hi there'
+print(model.chat("Hi there"))     # gpt-mini says: reply to 'Hi there'<|assistant|>
 ```
 
 `ChatModel` ထဲမှာ `describe` ကို မရေးထားပေမယ့် parent ဆီကနေ ဆက်ခံရလို့ အလုပ်လုပ်ပါတယ်။
@@ -153,6 +153,7 @@ class RequestCounter:
     def add(self):
         self.count += 1
         return self.count
+
 
 counter = RequestCounter()
 print(counter.add())  # 1

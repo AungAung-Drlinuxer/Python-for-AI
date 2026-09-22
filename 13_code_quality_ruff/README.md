@@ -28,6 +28,6 @@ AI project ကြီးတစ်ခုရေးသည့်အခါ code ရှ
 
 ## ကိုးကားလင့်ခ်များ
 
-- Ruff Setup: https://python.datalumina.com/ruff-setup
-- Format On Save: https://python.datalumina.com/format-on-save
-- Linting: https://python.datalumina.com/linting
+- Ruff Setup: https://python.datalumina.com/tools/code-quality
+- Format On Save: https://python.datalumina.com/tools/code-quality
+- Linting: https://python.datalumina.com/tools/code-quality

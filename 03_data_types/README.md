@@ -45,6 +45,6 @@
 
 ## Reference Links
 
-- Numbers: https://python.datalumina.com/
-- Strings: https://python.datalumina.com/
-- Booleans: https://python.datalumina.com/
+- Numbers: https://python.datalumina.com/data-types/numbers
+- Strings: https://python.datalumina.com/data-types/strings
+- Booleans: https://python.datalumina.com/data-types/booleans

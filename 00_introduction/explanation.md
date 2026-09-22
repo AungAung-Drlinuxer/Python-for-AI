@@ -52,7 +52,7 @@ questions = [
 ]
 
 for question in questions:
-    print(question)
+ print(question)
 
 # Expected output:
 # Do you want to build real AI projects?
@@ -79,7 +79,7 @@ for question in questions:
 learning_parts = ["syntax", "workflow"]
 
 for part in learning_parts:
-    print("Part:", part)
+ print("Part:", part)
 
 # Expected output:
 # Part: syntax

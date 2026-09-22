@@ -43,9 +43,9 @@ if statement တွေက ပရိုဂရမ်တိုင်းလိုလ
 
 ## Reference Links
 
-- [Python for AI — If Statements](https://python.datalumina.com/if-statements/)
-- [Python for AI — Variables](https://python.datalumina.com/)
-- [Python for AI — Comparison Operators](https://python.datalumina.com/)
+- [Python for AI — If Statements](https://python.datalumina.com/control-flow/if-statements)
+- [Python for AI — Variables](https://python.datalumina.com/basics/variables)
+- [Python for AI — Comparison Operators](https://python.datalumina.com/basics/operators)
 
 ---
 

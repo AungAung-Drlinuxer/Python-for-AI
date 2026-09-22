@@ -152,3 +152,229 @@ AI field မှာ project အသစ်တွေ မကြာခဏ စတင်
 - Rust နဲ့ ရေးထားပြီး pip, venv, pip-tools, pyenv တို့ကို အစားထိုးသည်
 - Virtual environment ကို အလိုအလျောက် စီမံပေးသည်
 - `uv init` -> `uv add` -> `uv run` workflow က project စတင်ရာကို ရိုးရိုးသွေးသွေး ဖြစ်စေသည်
+
+# uv ဖြင့် Python စတင်အသုံးပြုခြင်း — စတာမှ-အဆုံး လမ်းညွှန်
+
+## uv ဆိုတာ ဘာလဲ၊ ဘာကြောင့် မြန်လဲ
+
+uv ဆိုတာ Astral အဖွဲ့က ရေးထားတဲ့ Python package နှင့် environment စီမံခန့်ခွဲမှု tool တစ်ခုဖြစ်ပါတယ်။ Rust ဘာသာနဲ့ ရေးထားပြီး traditional pip နဲ့ ယှဉ်ရင် ဆယ်စုံကျော် မြန်စွာ အလုပ်လုပ်ပါတယ်။ မြန်ရတဲ့ အကြောင်းရင်းတွေကတော့ —
+
+၁။ **Rust နဲ့ ရေးထားခြင်း** — compiled language ဖြစ်လို့ CPU resource တွေကို အပြည့်အဝ အသုံးချနိုင်ပြီး pip (Python နဲ့ ရေးထားတာ) ထက် သိသိသာသာ မြန်ပါတယ်။
+
+၂။ **Global cache စနစ်** — package တစ်ခါ download လုပ်ပြီးရင် သက်ဆိုင်ရာ environment တိုင်းမှာ cache ထဲကနေ link လုပ်တာလို့ ဒစ်စက်နေရာလည်း သက်သာပြီး နောက်တစ်ခါ install တွေ အရမ်းမြန်ပါတယ်။
+
+၃။ **Parallel download** — package တွေကို တစ်ချက်တည်း မဟုတ်ပဲ တပြိုင်တည်း စုပေါင်း download လုပ်လို့ နှစ်ဆ သုံးဆ အထိ မြန်ပါတယ်။
+
+၄။ **Resolution algorithm မြန်ခြင်း** — dependency version တွေ ရွေးတဲ့ PubGrub algorithm က dependency conflict တွေကို လျင်မြန်စွာ ဖြေရှင်းပေးပါတယ်။
+
+## အခြေခံ command တွေ
+
+### `uv venv` — virtual environment ဖန်တီးခြင်း
+
+```bash
+uv venv
+```
+
+project folder ထဲမှာ `.venv` ဆိုတဲ့ virtual environment ဖန်တီးပေးပါတယ်။ Python version သီးသန့် ချင်ရင် —
+
+```bash
+uv venv --python 3.12
+```
+
+uv က Python interpreter ကိုပါ မသိုလာရင် အလိုအလျောက် download လုပ်ပေးတာကြောင့် Python ကို ကြိုတင် install လုပ်နေစရာ မလိုပါဘူး။
+
+### `uv init` — project အသစ် စတင်ခြင်း
+
+```bash
+uv init my-project
+cd my-project
+```
+
+ဒီ command က `pyproject.toml` နဲ့ `main.py` (သို့) `hello.py` ဖန်တီးပေးပြီး project အခြေခံ ဖိုင်တွေ အလိုအလျောက် ပြင်ဆင်ပေးပါတယ်။ `uv init --package my-project` လို့ ရေးရင် package အနေနဲ့ ဖြန့်ဖြီးနိုင်တဲ့ ဖွဲ့စည်းပုံ (`src/` layout) နဲ့ ဖန်တီးပေးပါတယ်။
+
+### `uv add` — package ထည့်သွင်းခြင်း
+
+```bash
+uv add requests
+```
+
+package ကို install လုပ်ပြီးသာမက `pyproject.toml` ထဲကိုပါ dependency အနေနဲ့ ရေးသွင်းပေးပြီး `uv.lock` ဖိုင်ကိုလည်း update လုပ်ပေးပါတယ်။ Development အတွက်သာ လိုအပ်တဲ့ package ဆိုရင် —
+
+```bash
+uv add --dev pytest
+```
+
+### `uv sync` — lock file နဲ့ တူညီအောင် စင်ခြင်း
+
+```bash
+uv sync
+```
+
+`uv.lock` ဖိုင်ထဲ record လုပ်ထားတဲ့ version တွေအတိုင်း environment ကို အတိအကျ ပြန်တည်ဆောက်ပေးပါတယ်။ Team တစ်ခုလုံးက တူညီတဲ့ version တွေ သုံးနိုင်အောင် အာမခံပေးတဲ့ command ဖြစ်ပါတယ်။
+
+### `uv run` — environment အတွင်းမှာ လည်ပတ်ခြင်း
+
+```bash
+uv run main.py
+```
+
+virtual environment ကို ကြိုတင် activate လုပ်နေစရာ မလိုပဲ script ကို တိုက်ရိုက် run ပေးပါတယ်။ Environment မရှိသေးရင် အလိုအလျောက် sync လုပ်ပေးပါတယ်။
+
+## `pyproject.toml` ဖိုင် ဖွဲ့စည်းပုံ
+
+`uv init` လုပ်ပြီးရင် ဒီလို `pyproject.toml` ရပါလိမ့်မယ် —
+
+```toml
+[project]
+name = "my-project"
+version = "0.1.0"
+description = "A simple demo project"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+]
+```
+
+အပိုင်းတွေရဲ့ အဓိပ္ပာယ်က —
+
+- `name`, `version`, `description` — project အချက်အလက်များ
+- `requires-python` — လိုအပ်တဲ့ Python version အနိမ့်ဆုံး
+- `dependencies` — production မှာ လိုအပ်တဲ့ package များ
+- `[dependency-groups]` — development အတွက်သာ သုံးတဲ့ package များ (pytest 처럼)
+
+## စတာမှ-အဆုံး Project Workflow
+
+အောက်မှာ တကယ့် project တစ်ခုကို uv နဲ့ ဖန်တီးပြီး run အထိ အဆင့်ဆင့် ပြထားပါတယ်။
+
+**အဆင့် ၁ — Project ဖန်တီးခြင်း**
+
+```bash
+uv init price-checker
+cd price-checker
+```
+
+**အဆင့် ၂ — လိုအပ်တဲ့ package ထည့်ခြင်း**
+
+```bash
+uv add requests
+uv add --dev pytest
+```
+
+**အဆင့် ၃ — Code ရေးခြင်း**
+
+`main.py` ကို ဖွင့်ပြီး ဒီ code ရေးပါ —
+
+```python
+import requests
+
+def fetch_price(symbol: str) -> float:
+    # Fetch a fake stock price from a public API
+    response = requests.get(f"https://httpbin.org/json")
+    response.raise_for_status()
+    data = response.json()
+    return data.get("slideshow", {}).get("slidecount", 0)
+
+if __name__ == "__main__":
+    count = fetch_price("AAPL")
+    print(f"Slide count received: {count}")
+```
+
+**အဆင့် ၄ — Run ခြင်း**
+
+```bash
+uv run main.py
+```
+
+**အဆင့် ၅ — Test ရေးပြီး run ခြင်း**
+
+`test_main.py` ဆိုတဲ့ ဖိုင် ဖန်တီးပြီး —
+
+```python
+from main import fetch_price
+
+def test_fetch_price_returns_number():
+    result = fetch_price("AAPL")
+    assert isinstance(result, int)
+```
+
+ပြီးရင် —
+
+```bash
+uv run pytest
+```
+
+**အဆင့် ၆ — Git မှာ မျှဝေခြင်း**
+
+`uv.lock` ဖိုင်ကို commit လုပ်ပါ — ဒါဆို အဖွဲ့ဝင်တိုင်းက `uv sync` နဲ့ တူညီတဲ့ environment ရနိုင်ပါတယ်။
+
+**အဆင့် ၇ — Git clone ပြီးတဲ့အခါ အခြားသူတွေ လုပ်ရမယ့်အရာ**
+
+```bash
+git clone <repo-url>
+cd price-checker
+uv sync
+uv run main.py
+```
+
+## ထပ်ဆောင်း လက်တွေ့ ဥပမာများ
+
+### ဥပမာ ၁ — pyproject.toml ဖိုင်ကို Python နဲ့ ဖတ်ကြည့်ခြင်း
+
+ဥပမာဒီ code က `pyproject.toml` ထဲက project နာမည်နဲ့ dependency စာရင်းကို Python standard library သာ သုံးပြီး ထုတ်ပြနိုင်ကြောင်း ပြသထားပါတယ်။
+
+```python
+import tomllib
+
+with open("pyproject.toml", "rb") as f:
+    data = tomllib.load(f)
+
+print(data["project"]["name"])
+for dep in data["project"]["dependencies"]:
+    print(f"- {dep}")
+# Expected output:
+# price-checker
+# - requests>=2.32.0
+```
+
+### ဥပမာ ၂ — uv နဲ့ install လုပ်ထားတဲ့ package version စစ်ခြင်း
+
+ဥပမာဒီ code က installed package တွေကို `importlib.metadata` နဲ့ စစ်ပြီး version တူမတူ တွေ့နိုင်ကြောင်း ပြသထားပါတယ်။
+
+```python
+from importlib.metadata import version
+
+for pkg in ["requests", "pytest"]:
+    try:
+        print(f"{pkg}: {version(pkg)}")
+    except Exception:
+        print(f"{pkg}: not installed")
+# Expected output:
+# requests: 2.32.3
+# pytest: 8.3.4
+```
+
+### ဥပမာ ၃ — subprocess နဲ့ uv sync လုပ်ပြီး lock file ရှိ/မရှိ စစ်ခြင်း
+
+ဥပမာဒီ code က `uv.lock` ဖိုင် ရှိမရှိ စစ်ပြီး မရှိရင် `uv sync` command ကို Python ကနေ ခေါ် run နိုင်ကြောင်း ပြသထားပါတယ်။
+
+```python
+import subprocess
+from pathlib import Path
+
+if Path("uv.lock").exists():
+    print("Lock file found, skipping sync")
+    # Expected output: Lock file found, skipping sync
+else:
+    result = subprocess.run(["uv", "sync"], capture_output=True, text=True)
+    print("Sync finished with return code:", result.returncode)
+    # Expected output: Sync finished with return code: 0
+```
+
+### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ
+
+uv က command တွေကို ရိုးရိုးလေး ဖန်တီးပေးပြီး မြန်စွာ အလုပ်လုပ်တာကြောင့် ကျောင်းသားတွေအတွက် setup အဆင့်တွေကို လျှော့ချပေးပြီး code ရေးတာနဲ့ ပိုမိုအာရုံစိုက်နိုင်စေပါတယ်။ `pyproject.toml` နဲ့ `uv.lock` ဖိုင်တွေက project ရဲ့ dependency တွေကို စာရွက်စာတမ်းအသွင် မှတ်တမ်းတင်ထားတာမလို့ team တစ်ခုလုံးရဲ့ environment တူညီမှုကို အာမခံပေးပါတယ်။ `uv sync` လို command တွေက CI/CD pipeline ထဲမှာပါ အလွယ်တကူ သုံးနိုင်တာကြောင့် production deploy အထိ တစ်ပြေးညီ ဖြစ်စေပါတယ်။ ဒီ workflow က pip, venv, pip-tools စတဲ့ tool အများအပြားရဲ့ လုပ်ဆောင်ချက်တွေကို tool တစ်ခုတည်းနဲ့ အစားထိုးနိုင်တာကြောင့် အစပြုသူတွေအတွက် ရှုပ်ထွေးမှု သိသိသာသာ လျှော့နိုင်ပါတယ်။

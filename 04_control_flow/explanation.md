@@ -21,7 +21,7 @@ temperature = -5
 
 # Check if the temperature is below zero
 if temperature < 0:
-    print("Snow icon")
+ print("Snow icon")
 
 # This line runs no matter what
 print("Done checking weather")
@@ -59,9 +59,9 @@ password = "1234"
 
 # Check if the password matches
 if password == "admin123":
-    print("Access granted")
+ print("Access granted")
 else:
-    print("Access denied")
+ print("Access denied")
 
 print("Login attempt finished")
 ```
@@ -98,11 +98,11 @@ temperature = 15
 
 # Decide which icon to show based on temperature
 if temperature < 0:
-    print("Snow icon")
+ print("Snow icon")
 elif temperature < 20:
-    print("Cold icon")
+ print("Cold icon")
 else:
-    print("Sunny icon")
+ print("Sunny icon")
 ```
 
 ```
@@ -121,3 +121,59 @@ Game တွေမှာ health အလိုက် အခြေအနေ အမ�
 - `else` — မှားရင် လုပ်
 - `elif` — condition အများကို အဆင့်ဆင့် စစ်
 - Indentation က Python အတွက် သတိထားစရာ အရေးကြီးဆုံးအချက် ဖြစ်ပါတယ်
+
+## ထပ်ဆောင်း လက်တွေ့ ဥပမာများ
+
+### ဥပမာ ၁ — အခြေအနေစစ်ပြီး စိတ်ဝင်စားမှု ပြောင်းခြင်း
+if / elif / else သုံးပြီး အသုံးပြုသူ၏ query length အရ စိတ်ဝင်စားမှုနယ်ပယ် ခွဲခြားပုံကို ပြထားပါတယ်။
+
+```python
+query = "what is the weather in Yangon today"
+
+if len(query) < 5:
+    print("Too short to understand")
+elif "weather" in query:
+    print("User is asking about weather")
+elif "news" in query:
+    print("User is asking about news")
+else:
+    print("General question")
+# Expected output: User is asking about weather
+```
+
+### ဥပမာ ၂ — အတက်အဆင့် တူညီမှု စစ်ဆေးခြင်း
+နှိုင်းယှဉ် operator (==) နဲ့ logical operator (and) သုံးပြီး အောင်မြင်မှုအတက်အဆင့် တူညီမှုကို စစ်ပုံကို ပြထားပါတယ်။
+
+```python
+score = 75
+streak = 3
+
+if score == 75 and streak == 3:
+    print("Exactly at threshold with a streak")
+elif score >= 75 or streak >= 5:
+    print("Qualified by either condition")
+else:
+    print("Not qualified yet")
+# Expected output: Exactly at threshold with a streak
+```
+
+### ဥပမာ ၃ — nested if နဲ့ tool call ဆုံးဖြတ်ခြင်း
+nested if သုံးပြီး API key ရှိမရှိ၊ token budget လုံ့လုံ့ရှိမရှိကို အဆင့်ဆင့် စစ်ပြီး tool ခေါ်မလား ဆုံးဖြတ်ပုံကို ပြထားပါတယ်။
+
+```python
+has_api_key = True
+token_budget = 200
+tool_requires = 150
+
+if has_api_key:
+    if token_budget >= tool_requires:
+        print("Calling weather tool")
+    else:
+        print("Enough key but not enough budget")
+else:
+    print("Cannot call tool: missing API key")
+# Expected output: Calling weather tool
+```
+
+### လက်တွေ့မှာ ဘာကြောင့် အရေးကြီးလဲ
+AI agent တစ်ခုဟာ tool တွေကို ဘယ်အချိန်မှာ ဘယ်လို အခြေအနေတွေ ပြည့်စုံမှ ခေါ်ရမလဲဆိုတာကို အတိအကျ သတ်မှတ်ပေးရပါတယ်၊ ဒါက if / elif / else နဲ့ comparison, logical operator တွေရဲ့ တိုက်ရိုက် အသုံးချမှုပါ။ ဥပမာ — API key ရှိပြီး token budget လုံလောက်မှသာ tool ခေါ်ရမယ်ဆိုတာက nested if နဲ့ ရေးရတဲ့ လော့ဂျစ်အတိအကျ ဖြစ်ပါတယ်။ ဒါမှမဟုတ်ရင် မဖြစ်သင့်တဲ့ အချိန်မှာ tool ခေါ်မိပြီး token နဲ့ ကုန်ကျစရိတ် အလွန်အကျွံ ဖြစ်စေမှာပါ။ ဒါကြောင့် ဒီ conditional အခြေခံတွေကို နားလည်နိုင်ရင် agent တစ်ခုရဲ့ ဆုံးဖြတ်ချက် လမ်းကြောင်းကို မှန်ကန်စွာ ဖန်တီးပေးနိုင်ပါတယ်။

@@ -20,7 +20,7 @@ print("Hello,", my_name)
 # Expected output: Hello, Aung Aung
 ```
 
-**Key idea —** `os.environ.get()` က system environment variable ကို နာမည်နဲ့ ဖတ်ယူတာပါ။
+**အဓိကအယူအဆ** — `os.environ.get()` က system environment variable ကို နာမည်နဲ့ ဖတ်ယူတာပါ။
 
 ## ၂ — Key ရှိ/မရှိ စစ်ခြင်း
 
@@ -31,13 +31,13 @@ import os
 api_key = os.environ.get("API_KEY")
 
 if api_key:
-    print("Key found")
+ print("Key found")
 else:
-    print("Key missing")
+ print("Key missing")
 # Expected output (not set): Key missing
 ```
 
-**Key idea —** `get()` က variable မရှိရင် `None` ပြန်လို့ `if` နဲ့ စစ်လို့ ရပါတယ်။
+**အဓိကအယူအဆ** — `get()` က variable မရှိရင် `None` ပြန်လို့ `if` နဲ့ စစ်လို့ ရပါတယ်။
 
 ## ၃ — `.env` File ဖန်တီးပြီး ဖတ်ခြင်း
 
@@ -63,7 +63,7 @@ print(api_key)
 # Expected output: test-key-123
 ```
 
-**Key idea —** `load_dotenv()` က `.env` file ထဲက value တွေကို environment variable အဖြစ် ရောက်စေပါတယ်။
+**အဓိကအယူအဆ** — `load_dotenv()` က `.env` file ထဲက value တွေကို environment variable အဖြစ် ရောက်စေပါတယ်။
 
 ## ၄ — Project Structure ဆောက်ခြင်း
 
@@ -95,7 +95,7 @@ print("Connecting to:", db_url)
 # Expected output: Connecting to: postgres://localhost/mydb
 ```
 
-**Key idea —** `.gitignore` မှာ `.env` ထည့်ထားရင် secret တွေ Git ဆီ တင်မိတော့ပါ။
+**အဓိကအယူအဆ** — `.gitignore` မှာ `.env` ထည့်ထားရင် secret တွေ Git ဆီ တင်မိတော့ပါ။
 
 ## ၅ — AI Agent Setting File ဖန်တီးခြင်း
 
@@ -121,16 +121,16 @@ model_name = os.environ.get("MODEL_NAME")
 
 if api_key:
     # Show only the first few characters of the key
-    print("Using model:", model_name)
-    print("API key ends with:", api_key[-4:])
+ print("Using model:", model_name)
+ print("API key ends with:", api_key[-4:])
 else:
-    print("No API key found.")
+ print("No API key found.")
 # Expected output:
 # Using model: gpt-4o-mini
 # API key ends with: -123
 ```
 
-**Key idea —** Setting တွေအားလုံးကို `.env` တစ်ခုထဲ စုသိမ်းပြီး key အပြည့်အစုံကို မပြပါနဲ့။
+**အဓိကအယူအဆ** — Setting တွေအားလုံးကို `.env` တစ်ခုထဲ စုသိမ်းပြီး key အပြည့်အစုံကို မပြပါနဲ့။
 
 ## ၆ — Safety Check Function
 
@@ -167,4 +167,4 @@ main()
 # Expected output: All secrets ready. Starting the AI agent...
 ```
 
-**Key idea —** Program အစမှာ secret စစ်ပြီးမှ ဆက်လုပ်တာက နောက်ပိုင်းမှာ မှားယွင်းမှုကို ကြိုတင်ကာကွယ်ပေးပါတယ်။
+**အဓိကအယူအဆ** — Program အစမှာ secret စစ်ပြီးမှ ဆက်လုပ်တာက နောက်ပိုင်းမှာ မှားယွင်းမှုကို ကြိုတင်ကာကွယ်ပေးပါတယ်။

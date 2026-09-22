@@ -14,6 +14,8 @@
 
 ---
 
+**Expected behavior:** Object တစ်ခုစီမှာ `title` နှင့် `author` ကို ခေါ်ကြည့်လို့ ရပါတယ်။
+
 ## ၂ — Method ထည့်ပါ
 
 `Book` class ထဲမှာ `describe()` ဆိုတဲ့ method တစ်ခု ထည့်ပါ။ ဒီ method က `"{title} by {author}"` ဆိုတဲ့ string ကို ပြန်ပေးပါ။ Object တစ်ခု ဖန်တီးပြီး `describe()` ကို ခေါ်ကြည့်ပါ။
@@ -23,6 +25,8 @@
 **မျှော်မှန်းအမူအယ:** `book.describe()` က `Python Basics by John` လိုမျိုး ပြန်ပါတယ်။
 
 ---
+
+**Expected behavior:** `book.describe()` က `Python Basics by John` လိုမျိုး ပြန်ပါတယ်။
 
 ## ၃ — Attribute ပြောင်းလဲနိုင်စေပါ
 
@@ -34,6 +38,8 @@
 
 ---
 
+**Expected behavior:** `add()` ကို သုံးခေါ်ရင် 1၊ 2၊ 3 ဆိုပြီး တိုးသွားပါတယ်။
+
 ## ၄ — AI Client Class ရေးပါ
 
 `OpenAIClient` ဆိုတဲ့ class ရေးပါ။ `__init__` မှာ `api_key` ကို လက်ခံပြီး သိမ်းပါ။ `generate(prompt)` method မှာ fake response string တစ်ခု ပြန်ပါ — ဥပမာ `"Response to: {prompt}"`။ Object နှစ်ခု အသုံးပြုပြီး key တွေက သီးသန့်ဖြစ်ကြောင်း ပြပါ။
@@ -43,6 +49,8 @@
 **မျှော်မှန်းအမူအယ:** Object တစ်ခုစီက ကိုယ်ပိုင် `api_key` နှင့် ကိုယ်ပိုင် response ရပါတယ်။
 
 ---
+
+**Expected behavior:** Object တစ်ခုစီက ကိုယ်ပိုင် `api_key` နှင့် ကိုယ်ပိုင် response ရပါတယ်။
 
 ## ၅ — Inheritance သုံးပါ
 
@@ -54,6 +62,8 @@
 
 ---
 
+**Expected behavior:** `describe()` နှင့် `chat()` နှစ်ခုလုံး အလုပ်လုပ်ပါတယ်။
+
 ## ၆ — Data Pipeline တစ်ခု Class နဲ့ ရေးပါ
 
 `DataPipeline` ဆိုတဲ့ class ရေးပါ။ Class ထဲမှာ text list တစ်ခု သိမ်းပါ။ `add(text)` method နှင့် `process()` method ရေးပါ — `process()` က text တွေရဲ့ စာလုံးအရေအတွက်ကို list အဖြစ် ပြန်ပါ။ ဥပမာ `"hello ai"` က 7 ပြန်ပါမယ်။
@@ -61,3 +71,6 @@
 **Hints:** `__init__` မှာ `self.texts = []` နဲ့ စပါ။ `len()` function နဲ့ စာလုံးအရေအတွက် ရှာပါ။ List comprehension သုံးလို့ရပါတယ်။
 
 **မျှော်မှန်းအမူအယ:** Text နှစ်ခု add ပြီး `process()` ခေါ်ရင် အရှည်တွေပါတဲ့ list တစ်ခု ရပါတယ်။
+
+**Expected behavior:** Text နှစ်ခု add ပြီး `process()` ခေါ်ရင် အရှည်တွေပါတဲ့ list တစ်ခု ရပါတယ်။
+

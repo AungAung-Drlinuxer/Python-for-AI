@@ -15,6 +15,8 @@ shopping.append("salt")
 print(shopping)  # Output: ['rice', 'oil', 'eggs', 'salt']
 ```
 
+အဓိကအယူအဆ — `append()` ကိုသုံးပြီး list အဆုံးမှာ item အသစ် ထပ်ထည့်နိုင်ပါတယ်။
+
 ## ၂။ Dictionary နဲ့ ဖုန်းစာရင်း
 
 သော့ချက် — key ပေးရင် value တန်းရပါတယ်။ အသစ်ထည့်တာလည်း ဒီပုံစံပါ။
@@ -29,6 +31,8 @@ phonebook["Carol"] = "098765432"
 # Look up Bob's number by key
 print(phonebook["Bob"])  # Output: 097654321
 ```
+
+အဓိကအယူအဆ — Dictionary မှာ key ပေးရင် value တန်းရပြီး အသစ်ထည့်ရန် `phonebook["Carol"] = "098765432"` လို့ key နဲ့ value တွဲပေးရုံပါပဲ။
 
 ## ၃။ Coordinate Tuple
 
@@ -46,6 +50,8 @@ print(location[1])  # Output: 96.1
 # location[0] = 20.0
 ```
 
+အဓိကအယူအဆ — Tuple က အညွှန်း index နဲ့ တန်ဖိုးတွေကို ရယူဖတ်လို့ရပေမယ့် အတွင်းပါဝင် တန်ဖိုးတွေကို ပြင်ဆင်ပြောင်းလဲလို့မရသော မပြောင်းလဲနိုင်သည့် data type တစ်မျိုးဖြစ်ပါသည်။
+
 ## ၄။ Set နဲ့ Unique စကားလုံးများ
 
 သော့ချက် — `split()` က word list ပြန်ပြီး `set()` က duplicate အလိုအလျောက် ဖယ်ပေးပါတယ်။
@@ -61,6 +67,8 @@ unique_words = set(sentence.split())
 print(unique_words)      # Output: {'apple', 'banana', 'cherry'}
 print(len(unique_words))  # Output: 3
 ```
+
+အဓိကအယူအဆ — `split()` နဲ့ word list ကို `set()` ပြောင်းလိုက်တာနဲ့ duplicate စကားလုံးတွေအလိုအလျောက် ဖယ်သွားပြီး unique word တွေရဲ့ အရေအတွက်ကို `len()` နဲ့ ရယူနိုင်ပါတယ်။
 
 ## ၅။ List မှာ Index နဲ့ Item ရှာခြင်း
 
@@ -79,6 +87,8 @@ print(models[len(models) - 1])  # Output: llama
 # (c) Check membership with the in keyword
 print("claude" in models)  # Output: True
 ```
+
+အဓိကအယူအဆ — List တစ်ခုမှာ ပထမဆုံး item ကို index `0` နဲ့ရယူပြီး နောက်ဆုံး item ကို `len(models) - 1` နဲ့ရယူနိုင်ပြီး၊ `in` keyword ဖြင့် item တစ်ခု list ထဲပါဝင်မှုကိုစစ်နိုင်သည်။
 
 ## ၆။ AI Agent Profile
 
@@ -111,3 +121,6 @@ print(tasks, config, version, commands)
 ### နိဂုံး
 
 Container ၄ မျိုးကို အခြေအနေအလိုက် ရွေးသုံးတတ်ရင် data ကို ရှင်းရှင်းလင်းလင်း စီမံနိုင်ပါတယ်။ ပြောင်းလဲရင် **list**၊ key နဲ့ ရှာရင် **dictionary**၊ မပြောင်းရင် **tuple**၊ unique ဖို့ရင် **set** ပါ။
+
+အဓိကအယူအဆ — AI agent profile တစ်ခုကို list, dictionary, tuple, set ဆိုတဲ့ container ၄ မျိုးစလုံးကို သင့်တော်စွာ တွဲသုံးခြင်းဖြင့် data ကို စနစ်တကျ စီစဉ်ပြီး စီမံနိုင်ပါတယ်။
+

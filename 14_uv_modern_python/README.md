@@ -38,6 +38,6 @@ AI project တွေမှာ library တွေ များပြားလှ�
 
 ## Reference Links
 
-- [uv Intro](https://python.datalumina.com/lessons/uv-intro)
-- [uv Virtual Environment](https://python.datalumina.com/lessons/uv-virtual-env)
-- [Complete Setup](https://python.datalumina.com/lessons/complete-setup)
+- [uv Intro](https://python.datalumina.com/tools/dependencies/uv-intro)
+- [uv Virtual Environment](https://python.datalumina.com/tools/dependencies/virtual-env)
+- [Complete Setup](https://python.datalumina.com/tools/dependencies/complete-setup)

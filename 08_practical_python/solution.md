@@ -13,6 +13,8 @@ os.makedirs("sales_analysis/output", exist_ok=True)
 print("Folders created!")
 ```
 
+အဓိကအယူအဆ — `os.makedirs()` ရဲ့ `exist_ok=True` ကို သုံးပြီး folder ဖြစ်စေ၊ data နဲ့ output folder တွေကို ရှိပြီးသားဖြစ်နေလည်း error မထွက်ဘဲ လုံခြုံစွာ တည်ဆောက်နိုင်ပါတယ်။
+
 ## ၂။ Path စစ်ချက်
 
 `pathlib.Path` နဲ့ path တည်ဆောက်ပြီး `.exists()` နဲ့ ရှိမရှိ စစ်ပါတယ်။
@@ -24,10 +26,12 @@ from pathlib import Path
 data_file = Path("data") / "sales.csv"
 
 if data_file.exists():
-    print("File found")
+ print("File found")
 else:
-    print("File missing")
+ print("File missing")
 ```
+
+အဓိကအယူအဆ — `pathlib.Path` နဲ့ `/` operator သုံးပြီး path တည်ဆောက်ကာ `.exists()` method နဲ့ file ရှိမရှိကို စစ်ဆေးနိုင်ပါတယ်။
 
 ## ၃။ CSV ရေးခြင်း/ဖတ်ခြင်း
 
@@ -54,6 +58,8 @@ with open("data/sales.csv") as f:
         print(row)
 ```
 
+အဓိကအယူအဆ — `csv.writer` နဲ့ CSV file ကို ရေးသွင်းပြီး `csv.DictReader` နဲ့ row တစ်ခုချင်းစီကို dictionary ပုံစံ ပြန်ဖတ်နိုင်ပါတယ်။
+
 ## ၄။ Total တွက်ပြီး JSON Save
 
 Amount တွေကို `int()` နဲ့ ပြောင်းပြီး ပေါင်းကာ `json.dump()` နဲ့ သိမ်းပါတယ်။
@@ -64,15 +70,17 @@ import json
 
 # Read amounts and sum them up
 with open("data/sales.csv") as f:
-    reader = csv.DictReader(f)
-    total = sum(int(row["amount"]) for row in reader)
+ reader = csv.DictReader(f)
+ total = sum(int(row["amount"]) for row in reader)
 
 # Save the result as JSON
 with open("output/summary.json", "w") as f:
-    json.dump({"total": total}, f, indent=2)
+ json.dump({"total": total}, f, indent=2)
 
 print("Total saved:", total)
 ```
+
+အဓိကအယူအဆ — CSV ထဲက amount တွေကို `int()` နဲ့ ပြောင်းပြီး `sum()` နဲ့ ပေါင်းကာ ရလဒ်ကို `json.dump()` နဲ့ JSON file အဖြစ် သိမ်းဆည်းနိုင်ပါတယ်။
 
 ## ၅။ Function တွေအဖြစ် စုစည်းခြင်း
 
@@ -107,6 +115,8 @@ if __name__ == "__main__":
     main()
 ```
 
+အဓိကအယူအဆ — အလုပ်တစ်ခုချင်းစီကို function တစ်ခုချင်းစီနဲ့ ခွဲခြားဖွဲ့စည်းပြီး `main()` function က အစဉ်လိုက် ခေါ်ယူဆောင်ရွက်စေခြင်း ဖြစ်ပါတယ်။
+
 ## ၆။ Product Report Function
 
 Product တစ်ခုချင်းစီရဲ့ total ကို dictionary ထဲမှာ စုပြီး JSON အဖြစ် save လုပ်ပါတယ်။
@@ -115,11 +125,13 @@ Product တစ်ခုချင်းစီရဲ့ total ကို dictionary
 import csv
 import json
 
+
 def read_sales(path):
     # Read CSV file and return rows as a list of dicts
     with open(path) as f:
         reader = csv.DictReader(f)
         return list(reader)
+
 
 def build_report(rows):
     # Add up amounts per product
@@ -133,10 +145,12 @@ def build_report(rows):
             report[product] = amount
     return report
 
+
 def save_report(report, path):
     # Save the report as JSON
     with open(path, "w") as f:
         json.dump(report, f, indent=2)
+
 
 def main():
     rows = read_sales("data/sales.csv")
@@ -144,8 +158,12 @@ def main():
     save_report(report, "output/report.json")
     print(report)
 
+
 if __name__ == "__main__":
     main()
 ```
 
 ဒီ function ခွဲရေးပုံစံက AI agent တစ်ခုကို စားပွဲပေးတဲ့ report လို data ပေးဖို့အတွက်လည်း တိုက်ရိုက် အသုံးဝင်ပါတယ်။
+
+အဓိကအယူအဆ — product တစ်ခုချင်းစီရဲ့ amount တွေကို dictionary ထဲမှာ စုစည်းပြီး `json.dump()` နဲ့ report JSON file အဖြစ် သိမ်းဆည်းနိုင်ပါတယ်။
+

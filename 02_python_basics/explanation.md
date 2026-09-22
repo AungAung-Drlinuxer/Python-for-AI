@@ -24,8 +24,8 @@
 # Correct indentation
 name = "Aung Aung"
 if name == "Aung Aung":
-    print("Hello!")
-    print("Welcome to Python.")
+ print("Hello!")
+ print("Welcome to Python.")
 print("Done.")
 ```
 
@@ -115,7 +115,7 @@ print(is_ready)      # Output: True
 
 ```python
 # String manipulation
-raw_input = "  Hello AI World  "
+raw_input = " Hello AI World  "
 clean = raw_input.strip().lower()
 print(clean)            # Output: hello ai world
 
