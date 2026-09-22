@@ -1,6 +1,6 @@
 # Formatting with Ruff — Lint & Format
 
-ဒီ module မှာ Python code တွေကို အလိုအလျောက် ရှင်းလင်းစွာရေးသွင်းနိုင်ရန် Ruff tool ကို သင်使用မည်။ (Python code ကို အလိုအလျောက် ရှင်းလင်းအဆင်ပြေစေရန် Ruff tool ကို အသုံးပြုသင်မည်။)
+ဒီ module မှာ Python code တွေကို အလိုအလျောက် ရှင်းလင်းစွာရေးသွင်းနိုင်ရန် Ruff tool ကို အသုံးပြုမည်။ (Python code ကို အလိုအလျောက် ရှင်းလင်းအဆင်ပြေစေရန် Ruff tool ကို အသုံးပြုသင်မည်။)
 
 ## ဒီ module မှာ ဘာသင်မလဲ
 

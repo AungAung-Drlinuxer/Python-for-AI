@@ -87,7 +87,6 @@ message = "Confidence: " + str(confidence)
 print(message)  # Confidence: 0.88
 ```
 
-===[FILE_END]===
 
 အဓိကအယူအဆ — float ကို string နှင့် ပေါင်းချင်ပါက `str()` ဖြင့် ပြောင်းပြီးမှ ပေါင်းရသည်။
 

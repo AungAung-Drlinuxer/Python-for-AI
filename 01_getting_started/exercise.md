@@ -34,11 +34,11 @@
 
 **Task** — Workspace ထဲမှာ `.venv` ဟု အမည်ပေးထားသော virtual environment တစ်ခု ဖန်တီးပြီး activate လုပ်ပါ။
 
-**Hint** — `python -m venv .venv` ဖြင့် ဖန်တီးပါ။ Windows မှာ `.venv\Scripts\activate` ၊ macOS/Linux မှာ `source .venv/bin/activate` ဖြင့် activate လုပ်ပါ။
+**Hint** — `python -m venv .venv` ဖြင့် ဖန်တီးပါ။ Windows မှာ `.venv\Scripts\activate`၊ macOS/Linux မှာ `source .venv/bin/activate` ဖြင့် activate လုပ်ပါ။
 
 **Expected behavior** — Terminal ရှေ့မှာ `(.venv)` ဟု ပေါ်လာပြီး သင့် environment အသုံးပြုရန် အသင့်ဖြစ်ပါမည်။
 
-**Hints:** `python -m venv .venv` ဖြင့် ဖန်တီးပြီး Windows တွင် `.venv\Scripts\activate` ၊ macOS/Linux တွင် `source .venv/bin/activate` ဖြင့် activate လုပ်ပါ။
+**Hints:** `python -m venv .venv` ဖြင့် ဖန်တီးပြီး Windows တွင် `.venv\Scripts\activate`၊ macOS/Linux တွင် `source .venv/bin/activate` ဖြင့် activate လုပ်ပါ။
 
 ## ၅။ Package Install လုပ်ပြီး အသုံးပြုခြင်း
 
@@ -48,7 +48,7 @@
 
 **Expected behavior** — `python sum.py` run လိုက်လျှင် ကိန်းများ၏ ပမာဏ တစ်ခု ထွက်လာပါမည်။
 
-**Hints:** `pip install numpy` ဖြင့် install လုပ်ပြီး `import numpy as np` ၊ `np.array()` နှင့် `.sum()` တို့ကို အသုံးပြုပါ။
+**Hints:** `pip install numpy` ဖြင့် install လုပ်ပြီး `import numpy as np`၊ `np.array()` နှင့် `.sum()` တို့ကို အသုံးပြုပါ။
 
 ## ၆။ AI Agent အတွက် ကြိုတင်စစ်ဆေးမှု Script
 

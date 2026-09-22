@@ -38,7 +38,7 @@
 
 ## Prerequisites (ဒီ module အရင် သင်ထားသင့်တာတွေ)
 
-- Python variables, functions, lists, dictionaries အ基础 တွေ
+- Python variables, functions, lists, dictionaries အခြေခံ တွေ
 - `pip` သုံးပြီး package install လုပ်နိုင်တဲ့ environment (venv)
 
 ## ဘယ်အချိန်မှာ အသုံးဝင်လဲ

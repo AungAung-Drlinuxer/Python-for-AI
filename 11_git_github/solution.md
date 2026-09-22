@@ -126,4 +126,33 @@ print(check_commit_message("fix data loading bug"))  # Good message
 **အဓိကအယူအဆ** — AI project တစ်ခုကို Git နဲ့ GitHub မှာ backup လုပ်တဲ့ အဆင့်တွေက command အနည်းငယ်နဲ့ပဲ ပြီးတယ်။
 
 ```python
-# Files in our
+# Five-step backup plan for a small AI project
+project_files = ["train.py", "bot.py", "data.csv"]
+
+steps = [
+    {"step": 1, "action": "Check what changed", "command": "git status"},
+    {"step": 2, "action": "Stage the project files", "command": "git add train.py bot.py data.csv"},
+    {"step": 3, "action": "Record a clear commit", "command": 'git commit -m "Add backup plan"'},
+    {"step": 4, "action": "Push to GitHub", "command": "git push origin main"},
+    {"step": 5, "action": "Verify the remote copy", "command": "git log --oneline -1"},
+]
+
+print("Backup plan for:", ", ".join(project_files))
+for item in steps:
+    print(f'{item["step"]}. {item["action"]}  ->  {item["command"]}')
+```
+
+**မျှော်မှန်ရလဒ်:**
+
+```text
+Backup plan for: train.py, bot.py, data.csv
+1. Check what changed  ->  git status
+2. Stage the project files  ->  git add train.py bot.py data.csv
+3. Record a clear commit  ->  git commit -m "Add backup plan"
+4. Push to GitHub  ->  git push origin main
+5. Verify the remote copy  ->  git log --oneline -1
+```
+
+Step တစ်ခုချင်းကို dictionary အဖြစ် list ထဲမှာ သိမ်းထားတဲ့အတွက် အဆင့်အသစ် ထပ်ထည့်ချင်ရင် dictionary တစ်ခု
+ထပ်ဖြည့်ရုံပါ — loop က ကျန် output ကို အလိုအလျောက် ဆက်ထုတ်ပေးမယ်။ Backup plan ကို data အဖြစ် ထားခြင်းက
+အဆင့်တွေကို version control ထဲမှာ ပြန်စစ်လို့ရစေပြီး၊ script ကို ပြန်ရေးစရာ မလိုတော့ပါ။

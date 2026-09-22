@@ -164,4 +164,3 @@ print(type(True))    # <class 'bool'>
 
 Program တစ်ခုမှာ data က ဘယ် type လဲ ဆိုတာ သိနေရင် error တွေကို ကြိုတင် ကာကွယ်လို့ ရပါတယ်။ ဒါဟာ debugging အတွက် အသုံးဝင်တဲ့ ပထမဆုံး အဆင့်ပါ။
 
-===[FILE_END]===

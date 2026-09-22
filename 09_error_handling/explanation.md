@@ -29,13 +29,14 @@ ValueError: invalid literal for int() with base 10: 'abc'
 
 **ဘာကို ဆိုလိုတာလဲ** — SyntaxError က program လည်တဲ့အခါမှာ မဟုတ်ဘဲ၊ Python က code ကို ဖတ်တဲ့အခါကတည်းက တွေ့တဲ့ error ပါ။ ဥပမာ — colon (:) မထည့်ရင် SyntaxError ရပါတယ်။
 
-**ဘာကြောင့် လဲ** — Python က တိကျတဲ့ ရေးသားပုံ (syntax) စည်းမျဉ်းတွေနဲ့ ရေးရပါတယ်။ စည်းမျဉ်းပျက်ရင် Python interpreter က code ကို စတင်လည်တာす မလုပ်နိုင်ပါဘူး။
+**ဘာကြောင့် လဲ** — Python က တိကျတဲ့ ရေးသားပုံ (syntax) စည်းမျဉ်းတွေနဲ့ ရေးရပါတယ်။ စည်းမျဉ်းပျက်ရင် Python interpreter က code ကို စတင်လည်တာ မလုပ်နိုင်ပါဘူး။
 
 **ဘယ်လို အလုပ်လုပ်လဲ** — Python က code တစ်ကြောင်းချင်း ဖတ်ပြီး စည်းမျဉ်းနဲ့ မကိုက်ရင် အဲဒီနေရာမှာပဲ SyntaxError ပြပါတယ်။
 
 **ဥပမာ** —
 
 ```python
+# INTENTIONAL: this snippet does NOT compile - it is the SyntaxError demo for this lesson
 # Missing colon after 'if' causes a SyntaxError
 x = 10
 if x > 5

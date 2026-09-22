@@ -245,7 +245,7 @@ dev = [
 - `name`, `version`, `description` — project အချက်အလက်များ
 - `requires-python` — လိုအပ်တဲ့ Python version အနိမ့်ဆုံး
 - `dependencies` — production မှာ လိုအပ်တဲ့ package များ
-- `[dependency-groups]` — development အတွက်သာ သုံးတဲ့ package များ (pytest 처럼)
+- `[dependency-groups]` — development အတွက်သာ သုံးတဲ့ package များ (pytest ကဲ့သို့)
 
 ## စတာမှ-အဆုံး Project Workflow
 

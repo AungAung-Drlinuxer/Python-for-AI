@@ -96,11 +96,11 @@ user_input = input("Enter a number: ")
 
 try:
     # Try to convert the input to an integer
- number = int(user_input)
- print("You entered:", number)
+    number = int(user_input)
+    print("You entered:", number)
 except ValueError:
     # This runs if the input is not a valid number, e.g. 'abc'
- print("Invalid number. Please try again.")
+    print("Invalid number. Please try again.")
 
 # The agent keeps running no matter what
 print("Agent still running!")
@@ -110,3 +110,8 @@ print("Agent still running!")
 Enter a number: abc
 Invalid number. Please try again.
 Agent still running!
+```
+
+**ရှင်းလင်းချက်** — `int(user_input)` က `'abc'` ကဲ့သို့သော စာသားကို integer အဖြစ် ပြောင်းလို့မရသဖြင့် `ValueError` ကို ထုတ်ပေးပါသည်။ `try` block အတွင်းမှာ error ဖြစ်လို့က `except ValueError` block က လမ်းစာချက်ကို ဖမ်းယူပြီး မှားနေကြောင်း အသုံးပြုသူကို အသိပေးပါသည်။ Program က crash မဖြစ်ဘဲ `Agent still running!` ကို ဆက်လက် print လုပ်နိုင်ပါသည်။
+
+**မေးခွန်း** — User input ကို အကြိမ်များစွာ မေးပြီး မှန်ကန်တဲ့ number ရသည်အထိ loop လုပ်ချင်ရင် `while` loop နဲ့ ဒီ pattern ကို ဘယ်လို ပေါင်းစပ်မလဲ?

@@ -48,4 +48,3 @@
 
 **Expected behavior:** `Confidence: 0.88` ဆိုတဲ့ message ထွက်ပါမယ်။
 
-===[FILE_END]===

@@ -20,7 +20,7 @@ Terminal မှာ `MY_NAME` ဆိုတဲ့ environment variable တစ်�
 
 **Hint:** `os.environ.get()` က variable မရှိရင် `None` ပြန်ပါတယ်။ `if` နဲ့ စစ်ပါ။
 
-**မျှော်မှန်းရလဒ် —** Variable ရှိတုန်းး `"Key found"`၊ မရှိရင် `"Key missing"` ထွက်ပါမယ်။
+**မျှော်မှန်းရလဒ် —** Variable ရှိတုန်း `"Key found"`၊ မရှိရင် `"Key missing"` ထွက်ပါမယ်။
 
 **Hints:** `os.environ.get()` က variable မရှိရင် `None` ပြန်တာကို သုံးပြီး `if` condition တစ်ခုနဲ့ ရှိ/မရှိ စစ်နိုင်ပါတယ်။
 
